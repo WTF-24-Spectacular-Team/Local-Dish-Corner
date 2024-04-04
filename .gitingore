@@ -1,4 +1,5 @@
-n# Ignore temporary files
+# Ignore temporary files
+
 _.tmp
 _.temp
 
