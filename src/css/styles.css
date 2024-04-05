@@ -1,0 +1,79 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Apply custom styles using Tailwind CSS directives */
+@tailwind components;
+
+/* Define custom components */
+@layer components {
+  * {
+    @apply box-border m-0 p-0;
+  }
+
+  .container {
+    @apply font-sans;
+  }
+
+  header {
+    @apply fixed h-36 w-full flex flex-nowrap p-4;
+  }
+
+  .logo {
+    @apply w-2/6 ml-10 mr-5;
+  }
+
+  .logo-img {
+    @apply w-full mr-6;
+  }
+
+  /* Custom styling for unordered lists */
+
+  .navbar {
+    @apply w-full overflow-hidden bg-off-white;
+  }
+
+  .navbar a {
+    @apply float-left text-base text-deep-grey text-center px-3.5 py-4 no-underline;
+  }
+  /* Custom styling for links inside list items */
+  .subnav {
+    @apply float-left overflow-hidden;
+  }
+
+  .subnav .subnavbtn {
+    @apply text-base border-none text-deep-grey px-3.5 py-4 bg-inherit m-0;
+    outline: none;
+  }
+
+  .navbar a:hover,
+  .subnav:hover .subnavbtn {
+    @apply bg-pri-green;
+  }
+
+  .subnav-content {
+    @apply hidden absolute z-1 left-0 w-full bg-off-white;
+  }
+
+  .subnav-content a {
+    @apply float-left text-deep-grey no-underline;
+  }
+
+  a:focus {
+    @apply bg-pri-orange;
+  }
+
+  a:active {
+    @apply bg-pri-orange text-white;
+  }
+
+  .subnav-content a:hover {
+    @apply bg-pri-green;
+  }
+
+  .subnav:focus.subnav-content {
+    display: block;
+  }
+}
+
+/* Additional custom styles outside Tailwind directives */

@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./output.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -19,10 +24,10 @@
     <title>Local Dish Corner</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container pr-9">
       <!-- HEADER SPACE -->
       <header class="flex">
-        <nav class="bg-off-white p-3 items-center flex justify-between w-full">
+        <nav class="bg-off-white p-2 items-center flex justify-between w-full">
           <!-- Logo -->
           <div class="w-1/5">
             <img
@@ -33,7 +38,7 @@
           </div>
 
           <!-- Navigation Links -->
-          <div class="flex items-center justify-center w-4/5">
+          <div class="flex items-center justify-center ml-0 w-4/5">
             <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
             <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5"
               >Explore Local Cuisine</a
@@ -53,7 +58,7 @@
               </div>
               <div
                 id="dropdownList"
-                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
+                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-orange-600 border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
               >
                 <!-- <a
                   href="#"
@@ -99,12 +104,12 @@
             <div class="ml-2">
               <button
                 type="submit"
-                class="bg-green-800 hover:bg-orange-600 text-white px-4 py-2 rounded-md"
+                class="bg-green-600 hover:bg-orange-600 text-white px-4 py-2 rounded-md"
               >
                 Sign Up
               </button>
               <button
-                class="hover:bg-orange-600 border-solid text-green-800 px-4 py-2 border-green-800 rounded-md ml-2"
+                class="hover:bg-orange-600 border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
                 type="submit"
               >
                 Login
@@ -117,20 +122,95 @@
       <!-- THIS IS MAIN SPACE -->
       <main></main>
       <!-- THE FOOTER GOES IN HERE -->
-      <footer class="text-center absolute bottom-0 p-1 bg-pri-grey block">
-        <section class="flex w-full mb-0">
-          <div class="w-1/6">
-            <img
-              src="./src/assets/logo-no-bg1.png"
-              alt="Logo"
-              class="object-cover w-full"
-            />
+      <footer class="absolute bottom-0 w-full h-auto bg-gray-200">
+        <section class="flex p-10 w-full">
+          <div class="w-1/5 ml-2">
+            <div class="w-full pt-2">
+              <img
+                src="./src/assets/logo-no-bg1.png"
+                alt="Brand"
+                class="object-cover w-3/4 m-auto"
+              />
+            </div>
+            <div class="w-full">
+              <div class="w-full flex">
+                <a href="#" class="w-full m-0 p-0 justify-center block">
+                  <img
+                    src="./src/assets/App_Store_(iOS)-Badge-Logo.wine.svg"
+                    alt="Apple Badge"
+                  />
+                </a>
+                <a href="#" class="w-full block m-3.5 p-0 justify-center">
+                  <img
+                    src="./src/assets/google-badge.png"
+                    alt="Google Play Badge"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="block">
+              <p class="text-xs">
+                Company # 490039-445, Registered with House of companies.
+              </p>
+            </div>
           </div>
-          <div class="w-1/6"></div>
-          <div class="w-1/6"></div>
-          <div class="w-1/6"></div>
-          <div class="w-1/6"></div>
-          <div class="w-1/6"></div>
+          <div class="w-4/5 flex ml-6 mr-6">
+            <div class="w-2/12 ml-2 -mr-1">
+              <h2 class="mb-2 font-bold">COMPANY</h2>
+              <a href="#" class="block mb-2 text-xs">Customers</a>
+              <a href="#" class="block mb-2 text-xs">Vendors</a>
+              <a href="#" class="block mb-2 text-xs">FAQS</a>
+              <a href="#" class="block mb-2 text-xs">Riders</a>
+              <a href="#" class="block mb-2 text-xs">Blogs</a>
+              <a href="#" class="block mb-2 text-xs">Careers</a>
+              <a href="#" class="block mb-2 text-xs">About</a>
+              <a href="#" class="block mb-2 text-xs">Contacts</a>
+            </div>
+            <div class="w-3/12 mr-2 ml-4">
+              <h3 class="mb-2 font-bold text-base -ml-1 mr-2">
+                LOCAL CUISINE NEAR YOU
+              </h3>
+              <a href="#" class="block mb-2 text-xs">Amala Sky</a>
+              <a href="#" class="block mb-2 text-xs">Uchenna Spot</a>
+              <a href="#" class="block mb-2 text-xs">God Grace Spot</a>
+              <a href="#" class="block mb-2 text-xs">CHop Life Kitchen</a>
+              <a href="#" class="block mb-2 text-xs">Mallam Musa Suya Spot</a>
+            </div>
+            <div class="w-2/12 mr-2">
+              <h2 class="mb-2 mr-1 font-bold">POPULAR KITCHEN</h2>
+              <a href="#" class="block mb-2 text-xs">Amala Sky</a>
+              <a href="#" class="block mb-2 text-xs">Uchenna Spot</a>
+              <a href="#" class="block mb-2 text-xs">Chop Life Kitchen</a>
+              <a href="#" class="block mb-2 text-xs">Mallam Musa Suya Spot</a>
+            </div>
+            <div class="w-2/12 ml-2 mr-2">
+              <h2 class="mb-2 font-bold">LEGAL PAGES</h2>
+              <a href="#" class="block mb-2 text-xs">Terms and Condition</a>
+              <a href="#" class="block mb-2 text-xs">Privacy</a>
+              <a href="#" class="block mb-2 text-xs">cookies</a>
+            </div>
+            <div class="w-2/12">
+              <h2 class="mb-2 font-bold">IMPORTANT LINKS</h2>
+              <a href="#" class="block mb-2 text-xs">Get help</a>
+              <a href="#" class="block mb-2 text-xs">Add your restaurant</a>
+              <a href="#" class="block mb-2 text-xs">Sign up to deliver</a>
+              <a href="#" class="block mb-2 text-xs"
+                >Create a business aacount</a
+              >
+            </div>
+          </div>
+        </section>
+        <section class="mt-6">
+          <div class="bg-green-700 h-16">
+            <div class="text-right flex p-4 float-right text-gray-200">
+              <span class="mr-10">Privacy Policy</span>
+              <span class="mr-10">Terms</span>
+              <span class="mr-10">Pricing</span>
+              <span class="mr-10"
+                >Do not sell or share my personal information</span
+              >
+            </div>
+          </div>
         </section>
       </footer>
     </div>

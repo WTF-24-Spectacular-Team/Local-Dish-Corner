@@ -1,5 +1,91 @@
-/* Custom CSS styles */
-.caret-up::before {
+/* styles.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@tailwind components;
+
+/* Additional custom styles */
+
+@layer components {
+  * {
+    @apply box-border m-0 p-0;
+  }
+}
+
+/* header {
+  height: 150px;
+  position: fixed;
+}
+
+.head {
+  width: 100%;
+  display: flex;
+}
+
+.logo {
+  width: 25%;
+  margin-left: 5%;
+  margin-right: -5%;
+}
+
+.navigate {
+  width: 75%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: fffdfa;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #00000098;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #389580;
+}
+
+.active {
+  background-color: #f88100;
+}
+
+/* .caret-up::before {
+  display: inline-block;
+  margin-left: 0.25em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+} */
+
+/* Initial hide the submenu */
+/* .submenu {
+  display: none; 
+}*/
+
+/* Show the submenu when dropdown is active */
+/* .dropdown.active .submenu {
+  display: block;
+} */
+
+/* ul { */
+/* @apply list-none;
+  } */
+
+/* .caret-up::before {
   display: inline-block;
   margin-left: 0.25em;
   vertical-align: 0.255em;
@@ -9,6 +95,11 @@
   border-left: 0.3em solid transparent;
 }
 
-li > a {
-  list-style-type: none;
+header {
+  height: 100px;
+  position: fixed;
 }
+
+.active {
+  color: #f88100;
+} */
