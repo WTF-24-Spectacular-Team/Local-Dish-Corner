@@ -21,13 +21,32 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Local Dish Corner</title>
+    <style>
+      .custom-css {
+        background-color: #f88100;
+        transition: all;
+        transition-duration: 1ms;
+        transition-timing-function: ease-in-out;
+      }
+      .custom-css:hover {
+        width: 210px;
+      }
+
+      .custom-css:focus {
+        display: block;
+      }
+    </style>
   </head>
   <body>
-    <div class="container pr-9">
+    <div class="container box-border">
       <!-- HEADER SPACE -->
-      <header class="flex">
-        <nav class="bg-off-white p-2 items-center flex justify-between w-full">
+      <header class="flex z-50 w-full fixed h-24 top-0 mb-1 bg-white">
+        <nav class="px-3 items-center flex bg-white justify-between w-full">
           <!-- Logo -->
           <div class="w-1/5">
             <img
@@ -58,7 +77,7 @@
               </div>
               <div
                 id="dropdownList"
-                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-orange-600 border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
+                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-pri-orange border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
               >
                 <!-- <a
                   href="#"
@@ -92,11 +111,11 @@
             <div class="relative mr-5">
               <input
                 type="text"
-                class="border border-gray-400 focus:outline-none px-3 py-1 rounded-md pl-10"
-                placeholder="Search..."
+                class="border-none focus:outline-none px-3 py-1 rounded-md pl-10 bg-gray-200 text-base"
+                placeholder="Search local cuisine"
               />
               <div class="absolute top-0 left-0 flex items-center h-full px-3">
-                <i class="fas fa-search text-gray-500"></i>
+                <i class="fas fa-search text-gray-400"></i>
               </div>
             </div>
 
@@ -122,16 +141,417 @@
       <!-- THIS IS MAIN SPACE -->
       <main>
         <!-- HERO SECTION -->
+        <section class="mb-10 mt-16">
+          <div class="relative h-full">
+            <div
+              class="bg-cover bg-center bg-gray-300 h-screen w-full bg-blend-overlay"
+              style="background-image: url(src/assets/hero-img.jpg)"
+            >
+              <div
+                class="absolute text-center mt-3 mb-4 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
+              >
+                <h1
+                  class="text-3xl pb-2 text-black tracking-wide font-semibold"
+                >
+                  &nbsp;&nbsp;&nbsp; &nbsp;Savor the Flavor, Discover <br />
+                  &nbsp;&nbsp;&nbsp;Local Cuisine Gems Near You
+                </h1>
+                <p class="text-x mt-4 tracking-wide">
+                  Bringing the Rich Tapestry of Local Cuisine <br />
+                  &nbsp;Right to Your Fingertips - Taste, Support, <br />
+                  &nbsp;&nbsp;and Enjoy the Best of Your Community!
+                </p>
+                <button
+                  class="mx-40 mt-10 rounded-md text-white px-6 py-3 hover:bg-red-500 cursor-pointer outline-none"
+                  style="background-color: #f88100"
+                >
+                  Explore Local Cuisine
+                </button>
+              </div>
+              <div class="absolute w-full flex bottom-0 bg-white h-12">
+                <span class="ml-28 flex mr-16 mt-4"
+                  ><i
+                    class="fab fa-whatsapp text-4xl mr-2"
+                    style="color: #f88000a0"
+                  ></i
+                  ><span class="ml-3 text-sm mt-2">
+                    Order made as easy as chatting with a friend</span
+                  ></span
+                >
+                <span class="mx-12 flex mt-4"
+                  ><img
+                    src="src/assets/img-247-no-bg.png"
+                    alt="24 7 icon"
+                    width="30"
+                  />
+                  <span class="ml-3 text-sm mt-2"
+                    >We offer round the clock customer service</span
+                  ></span
+                >
+                <span class="mr-20 ml-10 flex mt-4"
+                  ><img src="src/assets/discount-icon.png" alt="" /><span
+                    class="ml-3 text-sm mt-2"
+                    >Enjoy discount on all first order</span
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- POPULAR DISH SECTION -->
+        <section class="pl-16 pr-24 mt-28 bg-slate-100 w-full h-screen px-11">
+          <div class="grid grid-flow-col grid-cols-3 cursor-pointer">
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/Okro_soup-cropped.jpg"
+                  alt="Okro with Wheat"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-10 text-white pt-3">
+                  <span class="text-base font-bold ml-3"
+                    >God Grace Kitchen</span
+                  >
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light">Okra with Wheat</span>
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/Oha_Soup-cropped.jpg"
+                  alt="Oha Soup"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">Uchenna Kitchen</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light">Oha Soup</span>
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/Edikaikon-cropped.jpg"
+                  alt="Okro_soup and Wheat"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">God Grace Kitchen</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light">Okra with Wheat</span>
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-flow-col grid-cols-3 cursor-pointer">
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/Ewedu_soup-cropped.jpg"
+                  alt="Amala with Assorted"
+                  class="flex my-12 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">Amala Sky</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light"
+                    >Amala with Assorted</span
+                  >
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/eforiro-cropped.jpg"
+                  alt="Efo ririo with Assorted"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">Amala Sky</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light"
+                    >Efo ririo with Assorted</span
+                  >
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/rice_plantain-cropped.jpg"
+                  alt="Rice with Plantain"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">Chop Life Spot</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light"
+                    >Rice with Plantain</span
+                  >
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- TOP VENDORS -->
+        <section
+          class="mt-32 mb-8 pt-16 pr-24 pl-16 w-full h-auto"
+          style="background-color: #edf5f3"
+        >
+          <h2
+            class="text-black text-center pb-5 font-semibold text-xl tracking-wider"
+          >
+            Top Vendors
+          </h2>
+          <div class="grid grid-cols-3 mb-0">
+            <div class="w-80 m-6 relative">
+              <img
+                src="./src/assets/Amala_sky.jpg"
+                alt="Amala Sky Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Amala Sky
+                </p>
+              </div>
+            </div>
+            <div class="w-80 m-6 relative h-80">
+              <img
+                src="./src/assets/God_grace.jpg"
+                alt="God Grace Spot Logo"
+                class="rounded-2xl pb-16"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Shukurat Spot
+                </p>
+              </div>
+            </div>
+            <div class="w-80 m-6 relative">
+              <img
+                src="./src/assets/Mallam_musa.jpg"
+                alt="Mallam Musa Suya Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Mallam Musa Suya Spot
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 mt-0">
+            <div class="w-80 m-6 relative h-80">
+              <img
+                src="./src/assets/Chop_life.jpg"
+                alt="Chop Life Kitchen Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Chop Life Kitchen
+                </p>
+              </div>
+            </div>
+            <div class="w-80 m-6 relative h-80">
+              <img
+                src="./src/assets/Korede.jpg"
+                alt="korede Spaghetti Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Korede Spaghetti
+                </p>
+              </div>
+            </div>
+            <div class="w-80 m-6 relative h-80">
+              <img
+                src="./src/assets/Iya_Aladuku.jpg"
+                alt="Iya-Aladuke Kitchen Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Iya Aladuke
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- DISPLAY SECTION -->
+        <section class="flex mt-10 mb-12 w-full h-auto">
+          <div class="flex h-screen w-full mx-24">
+            <div
+              class="w-2/3 h-screen rounded-lg"
+              style="background-color: #ffefdcf5"
+            >
+              <img
+                src="src/assets/logo-no-bg1.png"
+                alt="Local Dish Logo"
+                class="w-full ml-10 px-10 my-60"
+              />
+            </div>
+            <div
+              class="h-screen w-1/2 ml-14 grid grid-flow-col grid-cols-2 relative"
+            >
+              <img
+                src="src/assets/frame0.jpg"
+                alt=""
+                class="w-52 z-20 h-40 absolute top-0 left-0 rounded-lg"
+              />
+              <img
+                src="src/assets/Frame1.jpg"
+                alt=""
+                class="w-60 h-2/4 absolute z-10 top-0 right-0 rounded-xl"
+              />
+              <img
+                src="src/assets/frame2-cropped.jpg"
+                alt=""
+                class="w-48 h-72 z-20 absolute top-40 left-0 rounded-xl"
+              />
+              <img
+                src="src/assets/frame4.jpg"
+                alt=""
+                class="w-72 absolute h-40 bottom-0 right-0"
+              />
+              <img
+                src="src/assets/Frame 760_2-cropped.jpg"
+                alt=""
+                class="w-44 rounded-sm z-30 absolute bottom-0 top-auto left-0 h-36 object-cover"
+              />
+              <img
+                src="src/assets/Frame 760_1.jpg"
+                alt=""
+                class="w-64 h-36 z-20 absolute top-72 right-0"
+              />
+            </div>
+          </div>
+        </section>
         <!-- PARTNERS SECTION -->
+        <section class="w-full mt-20 h-auto text-black px-16">
+          <h2 class="font-bold mt-10 text-center mb-10 text-2xl">Partners</h2>
+          <div class="flex w-full">
+            <div class="w-8/12 pr-12 relative">
+              <img
+                src="src/assets/partner_img-cropped.jpg"
+                alt="Image of Partners in their element"
+                class="w-full"
+              />
+              <div
+                class="absolute h-full top-0 -left-2 w-11/12 bg-black bg-transparent bg-opacity-5 bg-gradient-to-tr from-zinc-900"
+              >
+                <div
+                  class="absolute z-50 bg-white text-lg font-semibold rounded-b-md top-0 left-0 h-auto w-5/12 py-2 text-center"
+                >
+                  Earn more with lower fees
+                </div>
+                <div
+                  class="absolute text-center mt-3 mb-4 left-1/2 top-1/2 w-full"
+                ></div>
+              </div>
+            </div>
+            <div class="w-1/3 h-auto justify-end">
+              <p>
+                In the digital age, Local Dish Corner has witnessed a
+                signifiacnt transformation, with online platforms emerging as
+                crucial avenues for culinary exploration, recipe sharing, and
+                gastronomic delight. Partnering with us presents a myriad of
+                opportunities for culinary enthusiasts, food businesses, and
+                bfans alike to expand their reach, engage with a broader
+                audience, and cultivate meaningful connections within the
+                vibrant food community.
+              </p>
+              <p>
+                A strategic partnership with us opens the door to lucrative
+                cross-promotional opportunities that extend beyond digital
+                boundaries. From featured articles and sponsored contene to
+                social media collaborations and events partnerships, you can
+                leverage the platform to showcase your brand, products, or
+                culinary creations to a broader audience.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- SERVICES RENDERED SECTION -->
         <!-- LATEST NEWS  SECTION -->
         <!-- KNOW MORE ABOUT US SECTION -->
-        <!-- STATISTICS AND SUBSCRIPTION SECTION  -->
+        <!-- INSTALL APP SECTION -->
       </main>
       <!-- THE FOOTER GOES IN HERE -->
-      <footer class="absolute bottom-0 w-full h-auto bg-gray-200">
+      <footer class="mt-10 w-full h-auto bg-gray-200">
+        <!-- STATISTICS AND SUBSCRIPTION SECTION  -->
         <section class="flex p-10 w-full">
           <div class="w-1/5 ml-2">
             <div class="w-full pt-2">
@@ -209,7 +629,7 @@
         </section>
         <section class="mt-6">
           <div class="bg-green-700 h-16">
-            <div class="text-right flex p-4 float-right text-gray-200">
+            <div class="text-right text-xs flex p-6 float-right text-gray-200">
               <span class="mr-10">Privacy Policy</span>
               <span class="mr-10">Terms</span>
               <span class="mr-10">Pricing</span>
