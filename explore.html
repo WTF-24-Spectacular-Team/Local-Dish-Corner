@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/assets/favicon_io/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./output.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <title>Local Dish Corner</title>
+    <style>
+        .hero-title {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: url(./src/assets/Frame\ 813.png);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-300">
+    <div>
+        <!-- HEADER SPACE -->
+        <header class="flex fixed top-0 left-0 right-0 bg-white">
+            <nav class="bg-off-white p-2 items-center flex justify-between w-full">
+                <!-- Logo -->
+                <div class="w-1/5">
+                    <img src="./src/assets/logo-no-bg1.png" alt="Logo" class="w-3/4 object-cover ml-4 mr-0" />
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="flex items-center justify-center ml-0 w-4/5">
+                    <a href="./Index.html" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
+                    <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Explore Local Cuisine</a>
+                    <a href="#" class="text-deep-grey p-1 rounded ml-2 mr-5">Vendor</a>
+
+                    <!-- More Dropdown -->
+                    <div class="relative mr-5 ml-2 p-1 inline-block text-left">
+                        <div>
+                            <a href="#" id="moreButton" class="text-deep-grey mr-5 rounded p-1 focus:outline-none">
+                                More <i class="fas fa-angle-down"></i>
+                            </a>
+                        </div>
+                        <div id="dropdownList"
+                            class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-orange-600 border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
+                            <!-- <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Item 1</a
+                > -->
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Event Planner
+                                Corner</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Culinary
+                                ScholarShip Opportunity</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Search -->
+                    <div class="relative mr-5">
+                        <input type="text" class="border border-gray-400 focus:outline-none px-3 py-1 rounded-md pl-10"
+                            placeholder="Search..." />
+                        <div class="absolute top-0 left-0 flex items-center h-full px-3">
+                            <i class="fas fa-search text-gray-500"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sign Up and Login Buttons -->
+                    <div class="ml-2">
+                        <button type="submit" class="bg-green-600 hover:bg-orange-600 text-white px-4 py-2 rounded-md">
+                            Sign Up
+                        </button>
+                        <button
+                            class="hover:bg-orange-600 border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
+                            type="submit">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- THIS IS MAIN SPACE -->
+        <main class="mt-32">
+
+            <div class="max-h-96 bg-cover bg-no-repeat w-full h-80"
+                style="background-image: url(./src/assets/Frame\ 813.png);">
+            </div>
+
+            <div class="relative px-20">
+                <div class="my-8 mx-20">
+                    <div class="hero-title">
+                        Your number 1 go to destination for local cuisines!
+                    </div>
+                    <h1 class="uppercase text-4xl text-black font-semibold my-6">Local Dish Corner</h1>
+                    <div class="flex space-x-3">
+                        <button class="appearance-none px-5 py-3 bg-green-600 flex text-white rounded-full">
+                            <img src="./src/assets/order-complete.png" class="object-contain" alt="Order complete">
+                            <span class="ml-3">Minimum Order: #1,000</span>
+                        </button>
+                        <button class="appearance-none px-5 py-3 bg-green-600 flex text-white rounded-full">
+                            <img src="./src/assets/Motocross.png" class="object-contain" alt="Delivery">
+                            <span class="ml-3">Delivery in 20-25 mins</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="ml-10">
+                    <div class="bg-green-600 inline-flex px-5 py-3 text-white" style="border-radius: 0 8px 8px 0;">
+                        <img src="./src/assets/Clock.png" class="object-contain" alt="Clock">
+                        <span class="ml-3">Open until 8:00 PM</span>
+                    </div>
+                </div>
+
+                <div class="py-2 pl-4 absolute bg-white" style="top: -70%; right: 0; border-radius: 8px 0 0 8px;">
+                    <img src="./src/assets/Frame 813.png" alt="Side Image" class="object-contain">
+                    <div class="relative">
+                        <img src="./src/assets/rating.png" alt="Rating" class="absolute" style="bottom: 0; left: 0;">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="relative mr-5 flex flex-row justify-around" style="margin-top: 100px;">
+                <h1 class="text-3xl font-bold text-black">All Offers from GOD GRACE Spot</h1>
+                <input type="text" class="border border-gray-400 focus:outline-none px-3 py-1 rounded-md pl-10"
+                    placeholder="Search..." />
+                <!-- <div class="absolute top-0 left-0 flex items-center h-full px-3">
+                <i class="fas fa-search text-gray-500"></i>
+            </div> -->
+            </div>
+
+            <!--list of food items-->
+            <div class="flex flex-row justify-center align-middle gap-10 bg-white text-black font-bold  py-2 text-middle "
+                style="margin-top: 60px;">
+                <div class="bg-green-600 px-2 rounded-full text-white" style="border: 1px solid black">Offers</div>
+                <div>Nkwobi</div>
+                <div>Abacha</div>
+                <div>Ewedu</div>
+                <div>Tuwo</div>
+                <div>Zobo drinks</div>
+                <div>Ofada</div>
+                <div>EWa-Goin</div>
+                <div>Hot Jollof</div>
+                <div>Suya</div>
+                <div>Banga</div>
+
+            </div>
+
+            <div class="flex flex-row justify-center align-middle gap-6" style="margin-top: 100px">
+                <div><img src="./src/assets/Group 8.png" alt=""></div>
+                <div><img src="./src/assets/Rectangle 9.png" alt=""></div>
+                <div><img src="./src/assets/suya.png" alt=""></div>
+            </div>
+            <!--soup & swallow category-->
+            <div style="margin-top: 100px; font-size: 24px; margin-left: 315px; color: #f88100;">Soup & Swallow</div>
+            <div class="flex justify-center items-center mt-8">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                </div>
+            </div>
+            <!--meals category-->
+            <div style="margin-top: 100px; font-size: 24px; margin-left: 315px; color: #f88100;">Meals</div>
+            <div class="flex justify-center items-center mt-8">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                </div>
+            </div>
+            <!--Drinks category-->
+            <div style="margin-top: 100px; font-size: 24px; margin-left: 315px; color: #f88100;">Assorted & Drinks</div>
+            <div class="flex justify-center items-center mt-8">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                </div>
+            </div>
+
+            
+            <div style="max-width: 90%; margin-left: 310px; margin-top: 100px;">
+
+                <div style="display: grid; grid-template-columns: 50% 30%;">
+                    <div class="rounded-md" style="background-color: #FFFFFF; height: 500px;">
+                        <!-- Content for the 80% width column -->
+                        <h2 class="font-bold mt-14 ml-14" style="font-size: 22px;">Delivery Information</h2>
+                        <div class="grid grid-cols-1 gap-4 ml-14 mt-10">
+                            <p><span class="font-bold">Monday:</span>12:00PM,8:00AM-3:00 PM</p>
+                            <p><span class="font-bold">Tuesday:</span>8:00AM-7:00 PM</p>
+                            <p><span class="font-bold">Wednesday</span>8:00AM-3:00 PM</p>
+                            <p><span class="font-bold">Thursday</span>8:00AM-8:00 PM</p>
+                            <p><span class="font-bold">Friday</span>8:00AM-8:00 PM</p>
+                            <p><span class="font-bold">Saturday</span>8:00AM-3:00 PM</p>
+                            <p><span class="font-bold">Sunday</span>8:00AM-12:00 PM</p>
+                            <p><span class="font-bold">Estimated time until delivery:</span>   20 min</p>
+                        </div>
+   
+                    </div>
+                    <div class="rounded-md" style="background-color: #03081F; color: #FFFFFF">
+                        <h2 class="font-bold mt-10 ml-14" style="font-size: 22px;">Operational Time</h2>
+                        <div class="grid grid-cols-1 gap-4 ml-14 mt-10">
+                            <p><span class="font-bold">Monday:</span>8:00AM-3:00 PM</p>
+                            <p><span class="font-bold">Tuesday:</span>8:00AM-7:00 PM</p>
+                            <p><span class="font-bold">Wednesday</span>8:00AM-3:00 PM</p>
+                            <p><span class="font-bold">Thursday</span>8:00AM-8:00 PM</p>
+                            <p><span class="font-bold">Friday</span>8:00AM-8:00 PM</p>
+                            <p><span class="font-bold">Saturday</span>8:00AM-3:00 PM</p>
+                            <p><span class="font-bold">Sunday</span>8:00AM-12:00 PM</p>
+                           
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <!-- HERO SECTION -->
+                <!-- POPULAR DISH SECTION -->
+                <!-- TOP VENDORS -->
+                <!-- DISPLAY SECTION -->
+                <!-- PARTNERS SECTION -->
+        </main>
+        <!-- <div class="mt-4">
+               If you have allergies or other dietary restrictions, please contact the restaurant. The restaurant will provide food specific information upon request.
+            </div>
+            <div>
+                <h4>Phone number</h4>
+                <p>+234810467951</p>
+                <h4>Website</h4>
+                <p>https://www.localdishcorner.com</p>
+            </div> -->
