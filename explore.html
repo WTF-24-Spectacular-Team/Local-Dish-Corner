@@ -19,10 +19,10 @@
     </style>
 </head>
 
-<body class="bg-gray-300">
+<body>
     <div>
         <!-- HEADER SPACE -->
-        <header class="flex fixed top-0 left-0 right-0 bg-white">
+        <header class="flex fixed top-0 left-0 right-0 bg-white  z-50">
             <nav class="bg-off-white p-2 items-center flex justify-between w-full">
                 <!-- Logo -->
                 <div class="w-1/5">
@@ -83,7 +83,7 @@
         </header>
 
         <!-- THIS IS MAIN SPACE -->
-        <main class="mt-32">
+        <main class="mt-32 z-10" style="background-color: #ECECEC;">
 
             <div class="max-h-96 bg-cover bg-no-repeat w-full h-80"
                 style="background-image: url(./src/assets/Frame\ 813.png);">
@@ -122,92 +122,463 @@
 
             </div>
 
-            <div class="relative mr-5 flex flex-row justify-around" style="margin-top: 100px;">
+            <div class=" flex flex-row justify-around" style="margin-top: 100px;">
                 <h1 class="text-3xl font-bold text-black">All Offers from GOD GRACE Spot</h1>
-                <input type="text" class="border border-gray-400 focus:outline-none px-3 py-1 rounded-md pl-10"
-                    placeholder="Search..." />
-                <!-- <div class="absolute top-0 left-0 flex items-center h-full px-3">
-                <i class="fas fa-search text-gray-500"></i>
-            </div> -->
+                <div class="relative">
+                    <input type="text" class="border border-gray-400 focus:outline-none px-3 py-1 rounded-md pl-10"
+                        placeholder="Search..." />
+                    <div class="absolute top-0 left-0 flex items-center h-full px-3">
+                        <i class="fas fa-search text-gray-500"></i>
+                    </div>
+                </div>
             </div>
 
             <!--list of food items-->
-            <div class="flex flex-row justify-center align-middle gap-10 bg-white text-black font-bold  py-2 text-middle "
-                style="margin-top: 60px;">
-                <div class="bg-green-600 px-2 rounded-full text-white" style="border: 1px solid black">Offers</div>
-                <div>Nkwobi</div>
-                <div>Abacha</div>
-                <div>Ewedu</div>
-                <div>Tuwo</div>
-                <div>Zobo drinks</div>
-                <div>Ofada</div>
-                <div>EWa-Goin</div>
-                <div>Hot Jollof</div>
-                <div>Suya</div>
-                <div>Banga</div>
+            <div style="margin: 0 280px;">
+                <div class="flex flex-row w-fit justify-center align-middle gap-10 bg-white text-black font-bold  py-2 text-middle "
+                    style="margin-top: 60px;">
+                    <div class="bg-green-600 px-2 rounded-full text-white" style="border: 1px solid black">Offers</div>
+                    <div>Nkwobi</div>
+                    <div>Abacha</div>
+                    <div>Ewedu</div>
+                    <div>Tuwo</div>
+                    <div>Zobo drinks</div>
+                    <div>Ofada</div>
+                    <div>EWa-Goin</div>
+                    <div>Hot Jollof</div>
+                    <div>Suya</div>
+                    <div>Banga</div>
 
+                </div>
             </div>
 
-            <div class="flex flex-row justify-center align-middle gap-6" style="margin-top: 100px">
-                <div><img src="./src/assets/Group 8.png" alt=""></div>
-                <div><img src="./src/assets/Rectangle 9.png" alt=""></div>
-                <div><img src="./src/assets/suya.png" alt=""></div>
+            <div class="flex flex-row justify-center align-middle gap-12" style="margin-top: 100px">
+                <div class="relative">
+                    <img src="./src/assets/Group 8.png" alt="">
+
+                    <div style="background: #03081F;" class="absolute top-0 right-0 h-fit w-fit p-2 rounded text-white">
+                        -20%</div>
+                    <div class="absolute bottom-0 left-0 text-white text-md font-bold p-2">First Order Discount</div>
+                    <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                        class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="./src/assets/Rectangle 9.png" alt="">
+                    <div class="absolute bottom-0 left-0 text-white text-md font-bold p-2 text-center">Refer a Friend
+                        and get a Discount</div>
+                </div>
+                <div class="relative"><img src="./src/assets/suya.png" alt="">
+                    <div style="background: #03081F;" class="absolute top-0 right-0 h-fit w-fit p-2 rounded text-white">
+                        -100%</div>
+                    <div class="absolute bottom-0 left-0 text-white text-md font-bold p-2">Taste Suya</div>
+                    <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                        class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                    </div>
+                </div>
             </div>
             <!--soup & swallow category-->
-            <div style="margin-top: 100px; font-size: 24px; margin-left: 315px; color: #f88100;">Soup & Swallow</div>
+            <div class="font-bold" style="margin-top: 100px; font-size: 26px; margin-left: 315px; color: #f88100;">Soup
+                & Swallow</div>
             <div class="flex justify-center items-center mt-8">
                 <div class="grid grid-cols-3 gap-4">
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">God Grace Spot</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>1 wrap of Pounded Yam and Egusi with Chicken laps & Ponmo</p>
+                            </div>
+                            <div><strong># 1,000</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/Rectangle 46.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Iya Tawa Spot</h1>
+                            </div>
+                            <div class="my-10">
+                                <p>2 wraps of Pounded Yam & Efo Riro</p>
+                            </div>
+                            <div><strong># 1,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/veges.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Ovies Kitchen</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>2 wraps of Starch & Banga with Catfish, Beef & Ponmo </p>
+                            </div>
+                            <div><strong># 2,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/bangasoup.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Chief Ehis</h1>
+                            </div>
+                            <div class="my-4">
+                                <p>2 Wraps of Eba and Ogbono Soup with Stockfish, Chicken, and Beef</p>
+                            </div>
+                            <div><strong>#2,000</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/ogbono.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Nkechi's Lounge</h1>
+                            </div>
+                            <div class="my-6">
+                                <p>Hot Tasty Oha soup with Goat Meat, Stockfish, Ponmo and Beef</p>
+                            </div>
+                            <div><strong># 2,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/Oha_Soup.jpg"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Kehinde Kitchen</h1>
+                            </div>
+                            <div class="my-6">
+                                <p>
+                                    2 Wraps of Amala and Ewedu Soup & Gbegiri with Assorted meats
+                                </p>
+                            </div>
+                            <div><strong>#2,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/ewedu.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <!--meals category-->
-            <div style="margin-top: 100px; font-size: 24px; margin-left: 315px; color: #f88100;">Meals</div>
+            <div class="font-bold" style="margin-top: 100px; font-size: 26px; margin-left: 315px; color: #f88100;">Meals
+            </div>
             <div class="flex justify-center items-center mt-8">
                 <div class="grid grid-cols-3 gap-4">
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Flavor's Meal</h1>
+                            </div>
+                            <div class="my-10">
+                                <p>Spicy Jollof with Plantain & Beef</p>
+                            </div>
+                            <div><strong>#1,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/joollof.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Iya Tawa Spot</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>A Plate of Ewa Agoyin with Sauce and Fresh Bread with Beef</p>
+                            </div>
+                            <div><strong>#1,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/ewagoyin.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Susu Breakfast Lounge</h1>
+                            </div>
+                            <div class="my-4">
+                                <p>2 Wraps of Moi-moi and pap with milk drippings</p>
+                            </div>
+                            <div><strong># 1,800</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/moimoi.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Tees morning lite</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>7 delicious fluffy Bean-Cake & Pap with Creamy Sweetened Milk drippings</p>
+                            </div>
+                            <div><strong># 1,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/pap&akara.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Chi-Chis Kitchen</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>A Plate of Tasty Delicious Porridge with smoked fish and beef slices</p>
+                            </div>
+                            <div><strong># 2,000</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/porridge.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Shukurat’s Diner</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>1 Full Leafy Wrap of Ofada Rice & Stew with Diced Plantain, Egg and Beef, & Fish</p>
+                            </div>
+                            <div><strong># 2,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/ofada.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--Drinks category-->
-            <div style="margin-top: 100px; font-size: 24px; margin-left: 315px; color: #f88100;">Assorted & Drinks</div>
+            <div class="font-bold" style="margin-top: 100px; font-size: 26px; margin-left: 315px; color: #f88100;">
+                Assorted & Drinks</div>
             <div class="flex justify-center items-center mt-8">
                 <div class="grid grid-cols-3 gap-4">
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
-                    <div class="bg-white rounded-md" style="width: 400px; height: 250px;"></div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Thilda’s Special</h1>
+                            </div>
+                            <div class="my-10">
+                                <p>1 Plate of Peppered Tasty Fried Snails</p>
+                            </div>
+                            <div><strong># 2,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/pepperdsnail.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Lola’s Drinks</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>A Glass of Icy Spicy Chilled Zobo, with Pineapples Flavor</p>
+                            </div>
+                            <div><strong># 1,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/zobo.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Chi-Chis Kitchen</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>1 Plate of Delicious Abacha and 1big grilled Fish with sauce & Onion slices</p>
+                            </div>
+                            <div><strong># 2,000</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/abacha.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Flavor Meals</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>1 bowl of Hot Tasty Pepper Soup with Assorted Meat</p>
+                            </div>
+                            <div><strong># 2,000</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/assortedmeat.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Tees Morning Lite</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>1 Glass Drink of Tiger Nuts</p>
+                            </div>
+                            <div><strong># 2,000</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/tigernut.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md flex flex-row gap-4 relative"
+                        style="width: 400px; height: 200px; padding: 18px 20px;">
+                        <div>
+                            <div>
+                                <h1 class="font-bold">Uche’s Spot</h1>
+                            </div>
+                            <div class="my-7">
+                                <p>1 Plate of Rich Tasty Nkwobi with some onion slices</p>
+                            </div>
+                            <div><strong># 2,500</strong></div>
+                        </div>
+                        <div class="w-full h-full">
+                            <img style="border-radius: 10px;" src="./src/assets/nkwobi.png"
+                                class="h-full w-full object-cover">
+                            <div style="border-top-left-radius: 34px; background-color: #ECECEC;"
+                                class="absolute bottom-0 right-0 p-4"><img src="./src/assets/Plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            
-            <div style="max-width: 90%; margin-left: 310px; margin-top: 100px;">
+
+            <div style="max-width: 90%; margin-left: 310px; margin-top: 100px; ">
 
                 <div style="display: grid; grid-template-columns: 50% 30%;">
                     <div class="rounded-md" style="background-color: #FFFFFF; height: 500px;">
                         <!-- Content for the 80% width column -->
                         <h2 class="font-bold mt-14 ml-14" style="font-size: 22px;">Delivery Information</h2>
-                        <div class="grid grid-cols-1 gap-4 ml-14 mt-10">
-                            <p><span class="font-bold">Monday:</span>12:00PM,8:00AM-3:00 PM</p>
-                            <p><span class="font-bold">Tuesday:</span>8:00AM-7:00 PM</p>
-                            <p><span class="font-bold">Wednesday</span>8:00AM-3:00 PM</p>
-                            <p><span class="font-bold">Thursday</span>8:00AM-8:00 PM</p>
-                            <p><span class="font-bold">Friday</span>8:00AM-8:00 PM</p>
-                            <p><span class="font-bold">Saturday</span>8:00AM-3:00 PM</p>
-                            <p><span class="font-bold">Sunday</span>8:00AM-12:00 PM</p>
-                            <p><span class="font-bold">Estimated time until delivery:</span>   20 min</p>
+                        <div class="grid grid-cols-2">
+                            <div class="grid grid-cols-1 gap-4 ml-14 mt-10">
+                                <p><span class="font-bold">Monday:</span>12:00PM,8:00AM-3:00 PM</p>
+                                <p><span class="font-bold">Tuesday:</span>8:00AM-7:00 PM</p>
+                                <p><span class="font-bold">Wednesday</span>8:00AM-3:00 PM</p>
+                                <p><span class="font-bold">Thursday</span>8:00AM-8:00 PM</p>
+                                <p><span class="font-bold">Friday</span>8:00AM-8:00 PM</p>
+                                <p><span class="font-bold">Saturday</span>8:00AM-3:00 PM</p>
+                                <p><span class="font-bold">Sunday</span>8:00AM-12:00 PM</p>
+                                <p><span class="font-bold">Estimated time until delivery:</span> 20 min</p>
+                            </div>
+                            <div class="mt-10">
+                                <div>If you have allergies or other<br>
+                                    dietary restrictions, please<br>
+                                    contact The<br>
+                                    restaurant.
+                                    The restaurant will provide
+                                    food-<br>specific information upon<br> request.
+                                </div>
+                                <div>
+                                    <h2 class="font-bold mt-4">Phone number</h2>
+                                    <p>+2348101467951</p>
+                                    <h2 class="font-bold">Website</h2>
+                                    <p>http://www.localdishcorner.com</p>
+                                </div>
+                            </div>
                         </div>
-   
+
                     </div>
                     <div class="rounded-md" style="background-color: #03081F; color: #FFFFFF">
                         <h2 class="font-bold mt-10 ml-14" style="font-size: 22px;">Operational Time</h2>
@@ -219,32 +590,263 @@
                             <p><span class="font-bold">Friday</span>8:00AM-8:00 PM</p>
                             <p><span class="font-bold">Saturday</span>8:00AM-3:00 PM</p>
                             <p><span class="font-bold">Sunday</span>8:00AM-12:00 PM</p>
-                           
+
                         </div>
 
                     </div>
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <!-- HERO SECTION -->
-                <!-- POPULAR DISH SECTION -->
-                <!-- TOP VENDORS -->
-                <!-- DISPLAY SECTION -->
-                <!-- PARTNERS SECTION -->
+                <!--Google map-->
+
+                <div class="aspect-w-16 aspect-h-9 bg-black relative"
+                    style="margin-top: 200px; height: 700px; width: 1250px;">
+                    <iframe class="w-full h-full" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31715.59089708261!2d3.367056930224644!3d6.537264512184689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b917c78de6a79%3A0xb6b9b1a81d12f635!2sLagos%20Mainland!5e0!3m2!1sen!2sng!4v1618659884720!5m2!1sen!2sng"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="absolute bottom-4 left-4 px-9 py-24 rounded-md" style="background-color:  #03081F;">
+                        <h1 class="font-semibold text-white my-2">CONTACT SUPPORT:</h1>
+                        <p class="text-white my-4">MAINLAND, LAGOS</p>
+                        <h4 class="text-white font-semibold">Phone Number</h4>
+                        <p class="mb-4" style="color: #FC8A06">
+                            +234-7087-334-986</p>
+                        <h4 class="text-white font-semibold">Website</h4>
+                        <p style="color: #FC8A06">
+                            http://www.Localdishcorner.com</p>
+                    </div>
+                </div>
+                <div style="height: 200px;"></div>
         </main>
-        <!-- <div class="mt-4">
-               If you have allergies or other dietary restrictions, please contact the restaurant. The restaurant will provide food specific information upon request.
+
+        <!--customers Reviews/Carousel-->
+        <section class="bg-white" style="margin: 0 300px;">
+            <div class="flex flex-row justify-between my-10">
+                <div class="font-bold" style="font-size: 28px;">Customers Reviews</div>
+                <div>
+                    <button class="px-4 py-4" style="background-color: #FC8A06; border-radius: 50%;"><img
+                            src="./src/assets/Back.png"></button>
+                    <button class="px-4 py-4" style="background-color: #FC8A06; border-radius: 50%;"><img
+                            src="./src/assets/forward.png"></button>
+                </div>
             </div>
+            <div class="flex flex-row mt-8 gap-4  min-w-full">
+
+                <div class="h-fit" style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
+                    <div class="grid grid-cols-2 justify-between">
+                        <div class="flex flex-row">
+                            <div class=" m-2 pr-4" style="border-right: #FC8A06 2px solid;">
+                                <img src="/src/assets/Doyin.png" class="" height="48px" width="48px"
+                                    style="border-radius: 24px;" alt="">
+                            </div>
+                            <div>
+                                <p>Doyin</p>
+                                <p style="color: #FC8A06">Abuja</p>
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <div class="flex flex-row ml-auto">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                            </div>
+                            <div class="flex flex-row gap-2 my-2"> <img src="./src/assets/Time Span.png">29th March,
+                                2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-2">One experience I enjoy is that I get to have a detailed information of the meals
+                        before
+                        ordering, I also get suggestions
+                        based on my dietary preferences. The experience of the delivery as well is fantastic1 My meals
+                        were delivered on time.</div>
+                </div>
+
+                <div class="h-fit" style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
+                    <div class="grid grid-cols-2 justify-between">
+                        <div class="flex flex-row">
+                            <div class=" m-2 pr-4" style="border-right: #FC8A06 2px solid;">
+                                <img src="/src/assets/Tiony.png" class="" height="48px" width="48px"
+                                    style="border-radius: 24px;" alt="">
+                            </div>
+                            <div>
+                                <p>Tony</p>
+                                <p style="color: #FC8A06">Agege</p>
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <div class="flex flex-row ml-auto">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                            </div>
+                            <div class="flex flex-row gap-2 my-2"> <img src="./src/assets/Time Span.png">24th April,
+                                2023
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-2">My wife who is in her first trimester was craving for some oha soup and abacha,
+                        the Local dish came in handy. They
+                        delivered right on time, the meals were also packaged neatly and the taste was totally heavenly.
+                        I’m so glad i could
+                        make my wife happy. Thank You LCD</div>
+                </div>
+                <div class="h-fit" style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
+                    <div class="grid grid-cols-2 justify-between">
+                        <div class="flex flex-row">
+                            <div class=" m-2 pr-4" style="border-right: #FC8A06 2px solid;">
+                                <img src="/src/assets/Tobi.png" class="" height="48px" width="48px"
+                                    style="border-radius: 24px;" alt="">
+                            </div>
+                            <div>
+                                <p>Tobi</p>
+                                <p style="color: #FC8A06">Ikeja</p>
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <div class="flex flex-row ml-auto">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                            </div>
+                            <div class="flex flex-row gap-2 my-2"> <img src="./src/assets/Time Span.png">25th March,
+                                2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-2">If you're craving delicious local cuisine, look no further than this charming
+                        Amala sky! The amala and the assorted is
+                        prepared to a perfection, with the perfect fluffy texture and tasty soup that left me wanting
+                        more. The chilled cold
+                        drinks served on the side was awesome and welcoming. It was an ideal accompaniment to my meal!"
+                    </div>
+                </div>
+                <div class="h-fit hidden" style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
+                    <div class="grid grid-cols-2 justify-between">
+                        <div class="flex flex-row">
+                            <div class=" m-2 pr-4" style="border-right: #FC8A06 2px solid;">
+                                <img src="/src/assets/Doyin.png" class="" height="48px" width="48px"
+                                    style="border-radius: 24px;" alt="">
+                            </div>
+                            <div>
+                                <p>Steph</p>
+                                <p style="color: #FC8A06">Abuja</p>
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <div class="flex flex-row ml-auto">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                                <img src="./src/assets/Star.png">
+                            </div>
+                            <div class="flex flex-row gap-2 my-2"> <img src="./src/assets/Time Span.png">29th March,
+                                2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-2">One experience I enjoy is that I get to have a detailed information of the meals
+                        before ordering, I also get
+                        suggestions
+                        based on my dietary preferences. The experience of the delivery as well is fantastic1 My meals
+                        were delivered on
+                        time.</div>
+                </div>
+
+            </div>
+        </section>
+        <!--Restaurants-->
+        <section class="my-24 " style="padding: 40px 300px;background-color: #ECECEC;">
+            <div class="font-bold my-20" style="font-size: 26px;">Similar Restaurants</div>
+            <div class="flex flex-row gap-4 justify-evenly">
+                <div><img class="rounded-md" src="./src/assets/Amala_sky.jpg" /></div>
+                <div><img class="rounded-md" src="./src/assets/Chop_life.jpg" /></div>
+                <div><img class="rounded-md" src="./src/assets/Korede.jpg" /></div>
+                <div><img class="rounded-md" src="./src/assets/Iya_Aladuku.jpg" /></div>
+                <div><img class="rounded-md" src="./src/assets/Mallam_musa.jpg" /></div>
+            </div>
+
+        </section>
+        <!--Footer-->
+        <section class="bg-gray-300">
             <div>
-                <h4>Phone number</h4>
-                <p>+234810467951</p>
-                <h4>Website</h4>
-                <p>https://www.localdishcorner.com</p>
-            </div> -->
+                <div class="grid grid-cols-4 gap-8" style="padding: 20px 300px">
+                    <div class="mx-4">
+                        <img class="my-4" src="./src/assets/logo-no-bg1.png">
+                        <div class="flex flex-row gap-2" style="width: 100px ">
+                            <img src="./src/assets/apple-badge.png">
+                            <img class="py-4" src="./src/assets/google-play-badge.png">
+
+                        </div>
+                        <p class="my-2">Company # 490039-445, Registered with House of companies.</p>
+                    </div>
+                    <div class="mx-4 my-10">
+                        <h2 class="font-bold">Get Exclusive Deals in your Inbox</h2>
+
+                        <input type="email" id="email" name="email" placeholder="youremail@gmail.com" class="my-6">
+                        <p class=" my-10" style="font-size: 14px;">we wont spam, read our <a href="#">email policy</a>
+                        </p>
+                        <div class="flex flex-row my-8">
+                            <img src="./src/assets/Facebook.png">
+                            <img src="./src/assets/Instagram.png">
+                            <img src="./src/assets/TikTok.png">
+                            <img src="./src/assets/Snapchat.png">
+                        </div>
+
+                    </div>
+                    <div class="mx-4 my-10">
+                        <h4 class="font-bold">Legal Pages</h4>
+                        <div>
+                            <a href="#" style="font: 14px;">Terms and conditions</a>
+                            <a href="">Privacy</a>
+                            <a href="">Cookies</a>
+                            <a href="">Modern Slavery Statement</a>
+
+                        </div>
+
+                    </div>
+                    <div class="mx-4 my-10">
+                        <h4 class="font-bold">Important Links</h4>
+                        <div>
+                            <a href="">Get help</a>
+                            <a href="">Add your restaurant</a>
+                            <a href="">Sign up to deliver</a>
+                            <a href="">Create a business account</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 
+                    <div></div>
+  ww                  <div></div> -->
+
+            </div>
+            <div class="flex flex-row justify-between" style="background-color: #03081F; padding: 20px 300px">
+                <div class="text-white">
+                    Order.uk Copyright 2024, All Rights Reserved.
+                </div>
+                <div class="text-white flex flex-row gap-4">
+                    <div>Privacy Policy</div>
+                    <div>Terms</div>
+                    <div>Privacy</div>
+                    <div>Do not sell or share my personal information</div>
+                </div>
+            </div>
+    </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
