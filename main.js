@@ -30,3 +30,17 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownList.classList.toggle("hidden");
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const moreBtns = document.querySelectorAll(".moreBtn");
+  moreBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const content = this.parentNode.querySelector(".dropdown");
+      if (content.classList.contains("hidden")) {
+        content.classList.toggle("hidden");
+      } else {
+        content.classList.toggle("hidden");
+      }
+    });
+  });
+});
