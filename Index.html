@@ -41,6 +41,7 @@
       }
       .out {
         width: 100%;
+        height: 64rem;
         overflow: hidden;
         background-color: #f88100;
         position: relative;
@@ -48,7 +49,7 @@
 
       .in {
         width: 180%;
-        height: 80%;
+        height: 50rem;
         border-radius: 100%;
         background-color: #feefcf;
         position: absolute;
@@ -57,6 +58,7 @@
       }
       .place::placeholder {
         color: #000000;
+        font-size: small;
       }
     </style>
   </head>
@@ -141,12 +143,12 @@
             <div class="ml-2">
               <button
                 type="submit"
-                class="bg-green-600 hover:bg-orange-600 text-white px-4 py-2 rounded-md"
+                class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
               >
                 Sign Up
               </button>
               <button
-                class="hover:bg-orange-600 border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
+                class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
                 type="submit"
               >
                 Login
@@ -761,7 +763,7 @@
           </div>
         </section>
         <!-- KNOW MORE ABOUT US SECTION -->
-        <section class="w-full mt-20 h-auto px-16">
+        <section class="w-full mt-20 h-auto px-16 mb-20">
           <div class="px-16 w-full">
             <h2
               class="text-center text-4xl font-bold mb-20"
@@ -825,135 +827,141 @@
             </div>
           </div>
         </section>
-        <!-- INSTALL APP SECTION -->
-        <section class="w-full mt-10 h-screen mb-60">
-          <div
-            class="w-full h-full flex px-16 relative z-20"
-            style="background-color: #feefcf"
-          >
-            <div class="mt-44 w-1/2 h-auto relative">
-              <img
-                src="src/assets/mobile-app.png"
-                alt="Local Dish Corner Mobile App"
-                class="object-cover h-auto w-full absolute z-50"
-              />
-            </div>
-            <div class="pl-20 w-1/2 mt-24">
-              <h2
-                class="text-6xl font-bold tracking-tight mb-4"
-                style="color: #fc8906c1"
-              >
-                Install the app
-              </h2>
-              <p class="text-lg text-gray-500">
-                Join thousands of food lovers who have discovered the rich
-                flavors of Nigeria's Culinary heritage with Local Dish Corner.
-                Download the app now for an exceptional services & dining
-                experience!
-              </p>
-              <button class="mt-10 w-44">
-                <img
-                  src="src/assets/white-bg-google.jpg"
-                  alt="Link to download from google"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="out h-screen -mt-64">
-            <div class="in"></div>
-          </div>
-        </section>
       </main>
       <!-- THE FOOTER GOES IN HERE -->
 
       <footer class="w-full h-auto">
-        <!-- STATISTICS AND SUBSCRIPTION SECTION  -->
-        <section class="w-full relative">
-          <div
-            class="absolute z-30 w-full h-28 -mt-32 flex justify-between"
-            style="background-color: #233b32"
-          >
-            <div class="w-1/4 flex justify-between">
-              <div class="text-white text-center p-4 px-10">
-                <p class="text-xl font-normal pt-4">546+</p>
-                <p class="text-2xl font-semibold">Registered Riders</p>
+        <!-- INSTALL APP SECTION -->
+        <section class="w-full mt-10" style="background-color: #f88100">
+          <div class="out">
+            <div class="in flex p-80">
+              <div class="w-1/2">
+                <img
+                  src="src/assets/mobile-app.png"
+                  alt="mobile App"
+                  class="w-full ml-96 mr-24 pt-24"
+                />
               </div>
+              <div class="1/2 ml-96 mr-52 px-10">
+                <h2 class="text-6xl font-bold mb-5" style="color: #fc8a06">
+                  Install the app
+                </h2>
+                <p class="text-lg mb-10" style="color: #8f9698">
+                  Join thousands of food lovers who have discovered the rich
+                  flavors of Nigeria's Culinary heritage with Local Dish corner.
+                  Download the app now for an exceptional services & dining
+                  experience!
+                </p>
+                <a href="/">
+                  <img
+                    src="src/assets/white-bg-google.jpg"
+                    alt=""
+                    class="w-48"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- STATISTICS AND SUBSCRIPTION SECTION  -->
+            <section class="w-full absolute bottom-80">
               <div
-                class="my-2 mx-2"
-                style="
-                  border-right: 0.12rem solid rgb(206, 199, 199);
-                  height: 100px;
-                  place-items: center;
-                "
-              ></div>
-            </div>
-            <div class="w-1/4 flex justify-between">
-              <div class="text-white text-center p-4 px-10">
-                <p class="text-xl font-light pt-4">789,900+</p>
-                <p class="text-2xl font-semibold">Orders Delivered</p>
+                class="absolute z-30 w-full h-28 flex justify-between"
+                style="background-color: #233b32"
+              >
+                <div class="w-1/4 flex justify-between">
+                  <div class="text-white text-center p-4 px-10">
+                    <p class="text-xl font-normal pt-4">546+</p>
+                    <p class="text-2xl font-semibold">Registered Riders</p>
+                  </div>
+                  <div
+                    class="my-2 mx-2"
+                    style="
+                      border-right: 0.12rem solid rgb(206, 199, 199);
+                      height: 100px;
+                      place-items: center;
+                    "
+                  ></div>
+                </div>
+                <div class="w-1/4 flex justify-between">
+                  <div class="text-white text-center p-4 px-10">
+                    <p class="text-xl font-light pt-4">789,900+</p>
+                    <p class="text-2xl font-semibold">Orders Delivered</p>
+                  </div>
+                  <div
+                    class="my-2 mx-2"
+                    style="
+                      border-right: 0.12rem solid rgb(206, 199, 199);
+                      height: 100px;
+                      place-items: center;
+                    "
+                  ></div>
+                </div>
+                <div class="w-1/4 flex justify-between">
+                  <div class="text-white text-center p-4 px-5">
+                    <p class="text-xl font-light pt-4">690+</p>
+                    <p class="text-2xl font-semibold">Restaurants Partnered</p>
+                  </div>
+                  <div
+                    class="my-2"
+                    style="
+                      border-right: 0.12rem solid rgb(206, 199, 199);
+                      height: 100px;
+                      place-items: center;
+                    "
+                  ></div>
+                </div>
+                <div class="w-1/4">
+                  <div class="text-white text-center p-4 justify-evenly">
+                    <p class="text-xl font-light pt-4">17,457+</p>
+                    <p class="text-2xl font-semibold">Food Items</p>
+                  </div>
+                </div>
               </div>
-              <div
-                class="my-2 mx-2"
-                style="
-                  border-right: 0.12rem solid rgb(206, 199, 199);
-                  height: 100px;
-                  place-items: center;
-                "
-              ></div>
-            </div>
-            <div class="w-1/4 flex justify-between">
-              <div class="text-white text-center p-4 px-5">
-                <p class="text-xl font-light pt-4">690+</p>
-                <p class="text-2xl font-semibold">Restaurants Partnered</p>
+            </section>
+            <!-- SUBSCRIPTION Goes Here -->
+            <section
+              class="w-full flex absolute bottom-24 place-content-between z-40 px-20"
+            >
+              <div class="text-white text-center -mt-6">
+                <div class="flex">
+                  <img
+                    src="src/assets/newsletter.png"
+                    alt="Icon"
+                    class="inline mr-3 ml-0 h-16"
+                  />
+                  <p class="text-lg font-medium pt-6">Sign Up for Newsletter</p>
+                </div>
+                <p class="text-xs font-light -mt-1 ml-4">
+                  Sign up with us and get latest news about kitchen
+                </p>
               </div>
-              <div
-                class="my-2"
-                style="
-                  border-right: 0.12rem solid rgb(206, 199, 199);
-                  height: 100px;
-                  place-items: center;
-                "
-              ></div>
-            </div>
-            <div class="w-1/4">
-              <div class="text-white text-center p-4 justify-evenly">
-                <p class="text-xl font-light pt-4">17,457+</p>
-                <p class="text-2xl font-semibold">Food Items</p>
+              <div class="flex">
+                <div
+                  type="submit"
+                  class="w-48 h-10 bg-white place-content-center text-black pl-3 rounded-l-lg"
+                >
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="youremail@gmail.com"
+                    class="place"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="text-white w-24 h-10 p-2 font-semibold rounded-lg -ml-3"
+                  style="background-color: #233b32"
+                >
+                  Subscribe
+                </button>
               </div>
-            </div>
+            </section>
           </div>
         </section>
+        <!-- Footer Links Here -->
         <section
-          class="w-full h-48 mt-20 flex place-content-between px-28 z-30"
-          style="background-color: #f88100"
+          class="flex p-10 mt-0 w-full"
+          style="background-color: #e4e4e4"
         >
-          <div class="text-white mt-20 text-center">
-            <p class="text-lg font-medium">Sign Up for Newsletter</p>
-            <p class="text-xs font-light">
-              Sign up with us and get latest news about kitchen
-            </p>
-          </div>
-          <div class="mt-24 flex">
-            <button
-              type="submit"
-              class="w-48 h-10 bg-white place-content-center text-black py-2 pl-3 rounded-l-lg"
-            >
-              <input
-                type="email"
-                name="email"
-                placeholder="youremail@gmail.com"
-                class="place"
-              />
-            </button>
-            <div
-              class="text-white w-24 h-10 p-2 font-semibold rounded-lg -ml-3"
-              style="background-color: #233b32"
-            >
-              Subscribe
-            </div>
-          </div>
-        </section>
-        <section class="flex p-10 w-full bg-gray-200">
           <div class="w-1/5 ml-2">
             <div class="w-full pt-2">
               <img
@@ -1028,40 +1036,43 @@
             </div>
           </div>
         </section>
+        <!-- Cookies Goes Here -->
         <section class="w-full">
           <div
-            class="flex text-white h-24 px-10"
+            class="flex text-white h-28 px-10"
             style="background-color: #8f9698"
           >
-            <div class="w-full p-3">
-              <div class="ml-8 h-12 inline">
-                <i class="fas fa-cookie-bite" style="color: #ffffff"></i>
+            <div class="w-full pr-6">
+              <div class="ml-12 h-10 flex mt-4 mb-2">
+                <img src="src/assets/Cookie-icon.png" alt="Cookie-icon" />
+                <h2 class="ml-3 pt-1 font-semibold">We Value Your Privacy</h2>
               </div>
-              <h2 class="ml-1 inline">We Value Your Privacy</h2>
+
               <br />
-              <p class="text-xs font-semibold ml-16 tracking-wider pt-2">
-                We use cookies to make your browsing experience sweeter! Cookies
-                help us analyze traffic and show you personalized <br />content.
-                By clicking "accept all" you are given us permission to treat
-                you to a cookie or two.
+              <p class="text-xs font-medium ml-10 tracking-wider -mt-6">
+                We use cookies to provide you with best possible experience.
+                They also allow us analyze user behavior in other to constantly
+                improve the website for you.
               </p>
             </div>
-            <div class="flex w-1/3 place-content-evenly p-8">
+            <div class="flex w-2/5 float-right ml-32 p-10">
               <button
                 type="submit"
-                class="pb-4 px-3 border-solid border-2 border-white rounded-2xl"
+                class="pb-4 px-3 border-solid border border-white rounded-2xl mr-8"
               >
                 Reject All
               </button>
               <button
                 type="submit"
-                class="pb-4 px-3 border-solid border-2 border-white rounded-2xl"
+                class="pb-4 px-3 border-solid border-white rounded-2xl"
+                style="background-color: #233b32"
               >
                 Accept All
               </button>
             </div>
           </div>
-          <div class="bg-green-700 h-16">
+          <!-- PRIVACY POLICY HERE -->
+          <section class="bg-green-700 h-16">
             <div class="text-right text-xs flex p-6 float-right text-gray-200">
               <span class="mr-10">Privacy Policy</span>
               <span class="mr-10">Terms</span>
@@ -1070,7 +1081,7 @@
                 >Do not sell or share my personal information</span
               >
             </div>
-          </div>
+          </section>
         </section>
       </footer>
     </div>
