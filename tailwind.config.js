@@ -29,6 +29,9 @@ module.exports = {
       zIndex: {
         1: "1",
       },
+      borderColor: {
+        "bd-green": "#389580",
+      },
     },
   },
   plugins: [],

@@ -21,13 +21,52 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Local Dish Corner</title>
+    <style>
+      .custom-css {
+        background-color: #f88100;
+        transition: all;
+        transition-duration: 1ms;
+        transition-timing-function: ease-in-out;
+      }
+      .custom-css:hover {
+        width: 13.5rem;
+      }
+      .custom-css:focus {
+        width: 13.5rem;
+      }
+      .out {
+        width: 100%;
+        height: 64rem;
+        overflow: hidden;
+        background-color: #f88100;
+        position: relative;
+      }
+
+      .in {
+        width: 180%;
+        height: 50rem;
+        border-radius: 100%;
+        background-color: #feefcf;
+        position: absolute;
+        left: -45%;
+        top: -150px;
+      }
+      .place::placeholder {
+        color: #000000;
+        font-size: small;
+      }
+    </style>
   </head>
   <body>
-    <div class="container pr-9">
+    <div class="container box-border">
       <!-- HEADER SPACE -->
-      <header class="flex">
-        <nav class="bg-off-white p-2 items-center flex justify-between w-full">
+      <header class="flex z-50 w-full fixed h-24 top-0 mb-1 bg-white">
+        <nav class="px-3 items-center flex bg-white justify-between w-full">
           <!-- Logo -->
           <div class="w-1/5">
             <img
@@ -58,7 +97,7 @@
               </div>
               <div
                 id="dropdownList"
-                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-orange-600 border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
+                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-pri-orange border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
               >
                 <!-- <a
                   href="#"
@@ -92,11 +131,11 @@
             <div class="relative mr-5">
               <input
                 type="text"
-                class="border border-gray-400 focus:outline-none px-3 py-1 rounded-md pl-10"
-                placeholder="Search..."
+                class="border-none focus:outline-none px-3 py-1 rounded-md pl-10 bg-gray-200 text-base"
+                placeholder="Search local cuisine"
               />
               <div class="absolute top-0 left-0 flex items-center h-full px-3">
-                <i class="fas fa-search text-gray-500"></i>
+                <i class="fas fa-search text-gray-400"></i>
               </div>
             </div>
 
@@ -104,12 +143,12 @@
             <div class="ml-2">
               <button
                 type="submit"
-                class="bg-green-600 hover:bg-orange-600 text-white px-4 py-2 rounded-md"
+                class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
               >
                 Sign Up
               </button>
               <button
-                class="hover:bg-orange-600 border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
+                class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
                 type="submit"
               >
                 Login
@@ -122,17 +161,807 @@
       <!-- THIS IS MAIN SPACE -->
       <main>
         <!-- HERO SECTION -->
+        <section class="mb-10 mt-16">
+          <div class="relative h-full">
+            <div
+              class="bg-cover bg-center bg-gray-300 h-screen w-full bg-blend-overlay"
+              style="background-image: url(src/assets/hero-img.jpg)"
+            >
+              <div
+                class="absolute text-center mt-3 mb-4 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
+              >
+                <h1
+                  class="text-5xl pb-12 tracking-wider font-bold text-center"
+                  style="color: #f88100"
+                >
+                  &nbsp;&nbsp;&nbsp; &nbsp;Savor the Flavor, Discover Local
+                  <br />Cuisine Gems Near You
+                </h1>
+                <p class="text-xl font-normal mt-4 tracking-wide">
+                  Bringing the Rich Tapestry of Local Cuisine Right to Your
+                  Fingertips - <br />Taste, Support, and Enjoy the Best of Your
+                  Community!
+                </p>
+                <button
+                  class="w-56 mx-40 text-base tracking-wide mt-10 rounded-md text-white px-6 py-3 hover:bg-red-500 cursor-pointer outline-none"
+                  style="background-color: #f88100"
+                >
+                  Explore Local Cuisine
+                </button>
+              </div>
+              <div class="absolute w-full flex bottom-0 bg-white h-12">
+                <span class="ml-28 flex mr-16 mt-4"
+                  ><i
+                    class="fab fa-whatsapp text-4xl mr-2"
+                    style="color: #f88000a0"
+                  ></i
+                  ><span class="ml-3 text-sm mt-2">
+                    Order made as easy as chatting with a friend</span
+                  ></span
+                >
+                <span class="mx-12 flex mt-4"
+                  ><img
+                    src="src/assets/img-247-no-bg.png"
+                    alt="24 7 icon"
+                    width="33"
+                    class="object-cover"
+                  />
+                  <span class="ml-3 text-sm mt-2"
+                    >We offer round the clock customer service</span
+                  ></span
+                >
+                <span class="mr-20 ml-10 flex mt-4"
+                  ><img src="src/assets/discount-icon.png" alt="" /><span
+                    class="ml-3 text-sm mt-2"
+                    >Enjoy discount on all first order</span
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- POPULAR DISH SECTION -->
+        <section class="pl-16 pr-24 mt-28 bg-slate-100 w-full h-screen px-11">
+          <div class="grid grid-flow-col grid-cols-3 cursor-pointer">
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/Okro_soup-cropped.jpg"
+                  alt="Okro with Wheat"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-10 text-white pt-3">
+                  <span class="text-base font-bold ml-3"
+                    >God Grace Kitchen</span
+                  >
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light">Okra with Wheat</span>
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/Oha_Soup-cropped.jpg"
+                  alt="Oha Soup"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">Uchenna Kitchen</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light">Oha Soup</span>
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/Edikaikon-cropped.jpg"
+                  alt="Okro_soup and Wheat"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">God Grace Kitchen</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light">Okra with Wheat</span>
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-flow-col grid-cols-3 cursor-pointer">
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/Ewedu_soup-cropped.jpg"
+                  alt="Amala with Assorted"
+                  class="flex my-12 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">Amala Sky</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light"
+                    >Amala with Assorted</span
+                  >
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/eforiro-cropped.jpg"
+                  alt="Efo ririo with Assorted"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">Amala Sky</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light"
+                    >Efo ririo with Assorted</span
+                  >
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="relative m-10">
+              <div class="w-3/5 absolute">
+                <img
+                  src="src/assets/rice_plantain-cropped.jpg"
+                  alt="Rice with Plantain"
+                  class="flex my-10 rounded-xl w-full"
+                />
+              </div>
+              <div class="custom-css w-32 rounded-lg ml-32 h-72">
+                <p class="opacity-0 hover:opacity-100 ml-12 text-white pt-3">
+                  <span class="text-base font-bold">Chop Life Spot</span>
+                  <br /><br />
+                  <span class="text-xs ml-10 font-light"
+                    >Rice with Plantain</span
+                  >
+                  <br /><br /><br /><br /><br /><br /><br /><br />
+                  <a href="#" class="text-xs ml-20 font-extralight"
+                    >View Kitchen</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- TOP VENDORS -->
+        <section
+          class="mt-36 mb-8 pt-28 pr-24 pl-16 w-full h-auto"
+          style="background-color: #edf5f3"
+        >
+          <h2
+            class="justify-center pb-5 font-bold text-4xl tracking-wider flex"
+            style="color: #f88100"
+          >
+            Top Vendors
+          </h2>
+          <button class="float-right font-bold text-lg">View All ></button>
+          <div class="grid grid-cols-3 mt-7 mb-0">
+            <div class="w-80 m-6 relative">
+              <img
+                src="./src/assets/Amala_sky.jpg"
+                alt="Amala Sky Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Amala Sky
+                </p>
+              </div>
+            </div>
+            <div class="w-80 m-6 relative h-80">
+              <img
+                src="./src/assets/God_grace.jpg"
+                alt="God Grace Spot Logo"
+                class="rounded-2xl pb-16"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Shukurat Spot
+                </p>
+              </div>
+            </div>
+            <div class="w-80 m-6 relative">
+              <img
+                src="./src/assets/Mallam_musa.jpg"
+                alt="Mallam Musa Suya Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Mallam Musa Suya Spot
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 mt-0">
+            <div class="w-80 m-6 relative h-80">
+              <img
+                src="./src/assets/Chop_life.jpg"
+                alt="Chop Life Kitchen Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Chop Life Kitchen
+                </p>
+              </div>
+            </div>
+            <div class="w-80 m-6 relative h-80">
+              <img
+                src="./src/assets/Korede.jpg"
+                alt="korede Spaghetti Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Korede Spaghetti
+                </p>
+              </div>
+            </div>
+            <div class="w-80 m-6 relative h-80">
+              <img
+                src="./src/assets/Iya_Aladuku.jpg"
+                alt="Iya-Aladuke Kitchen Logo"
+                class="rounded-2xl"
+              />
+              <div
+                class="absolute bottom-0 h-20 w-full rounded-b-xl"
+                style="background-color: #f88100"
+              >
+                <p
+                  class="text-center p-4 font-black text-white text-xl tracking-wider"
+                >
+                  Iya Aladuke
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- DISPLAY SECTION -->
+        <section class="flex mt-10 mb-12 w-full h-auto">
+          <div class="flex h-screen w-full mx-24">
+            <div
+              class="w-2/3 h-screen rounded-lg"
+              style="background-color: #ffefdcf5"
+            >
+              <img
+                src="src/assets/logo-no-bg1.png"
+                alt="Local Dish Logo"
+                class="w-full ml-10 px-10 my-60"
+              />
+            </div>
+            <div
+              class="h-screen w-1/2 ml-14 grid grid-flow-col grid-cols-2 relative"
+            >
+              <img
+                src="src/assets/frame0.jpg"
+                alt=""
+                class="w-52 z-20 h-40 absolute top-0 left-0 rounded-lg"
+              />
+              <img
+                src="src/assets/Frame1.jpg"
+                alt=""
+                class="w-60 h-2/4 absolute z-10 top-0 right-0 rounded-xl"
+              />
+              <img
+                src="src/assets/frame2-cropped.jpg"
+                alt=""
+                class="w-48 h-72 z-20 absolute top-40 left-0 rounded-xl"
+              />
+              <img
+                src="src/assets/frame4.jpg"
+                alt=""
+                class="w-72 absolute h-40 bottom-0 right-0"
+              />
+              <img
+                src="src/assets/Frame 760_2-cropped.jpg"
+                alt=""
+                class="w-44 rounded-sm z-30 absolute bottom-0 top-auto left-0 h-36 object-cover"
+              />
+              <img
+                src="src/assets/Frame 760_1.jpg"
+                alt=""
+                class="w-64 h-36 z-20 absolute top-72 right-0"
+              />
+            </div>
+          </div>
+        </section>
         <!-- PARTNERS SECTION -->
+        <section class="w-full mt-20 h-auto px-16">
+          <h2
+            class="font-bold mt-10 text-center mb-10 text-4xl"
+            style="color: #f88100"
+          >
+            Partners
+          </h2>
+          <div class="flex w-full">
+            <div class="w-8/12 pr-12 relative pl-6">
+              <img
+                src="src/assets/partner_img-cropped.jpg"
+                alt="Image of Partners in their element"
+                class="w-full h-96 rounded-bl-xl"
+              />
+              <div
+                class="absolute h-full ml-3 top-0 left-0 w-11/12 bg-black bg-opacity-5 from-black from-80% via-transparent bg-gradient-to-tr rounded-b-2xl"
+              >
+                <div
+                  class="absolute z-50 bg-white text-base font-medium rounded-b-md top-0 left-0 h-auto w-5/12 py-2 text-center"
+                >
+                  Earn more with lower fees
+                </div>
+                <div
+                  class="absolute text-center mt-3 mb-4 left-36 top-64 transform -translate-x-1/2 -translate-y-1/2 w-full"
+                >
+                  <p
+                    class="font-semibold text-xl tracking-wide"
+                    style="color: #f88100"
+                  >
+                    Signup as a business
+                  </p>
+                  <p class="ml-40 text-white font-bold text-5xl">
+                    Partner With Us
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-1/3 h-text-end text-[0.88rem]">
+              <p>
+                In the digital age, Local Dish Corner has witnessed a
+                signifiacnt transformation, with online platforms emerging as
+                crucial avenues for culinary exploration, recipe sharing, and
+                gastronomic delight. Partnering with us presents a myriad of
+                opportunities for culinary enthusiasts, food businesses, and
+                brands alike to expand their reach, engage with a broader
+                audience, and cultivate meaningful connections within the
+                vibrant food community.
+              </p>
+              <p>
+                A strategic partnership with us opens the door to lucrative
+                cross-promotional opportunities that extend beyond digital
+                boundaries. From featured articles and sponsored contene to
+                social media collaborations and events partnerships, you can
+                leverage the platform to showcase your brand, products, or
+                culinary creations to a broader audience.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- SERVICES RENDERED SECTION -->
+        <section class="w-full mt-20 mb-20 h-auto flex">
+          <div
+            class="h-72 w-full px-28 flex justify-center items-center"
+            style="background-color: #feedcb"
+          >
+            <div class="bg-white w-full h-56 rounded-3xl flex px-16">
+              <div class="flex place-items-center w-1/3 mr-10">
+                <img
+                  src="src/assets/discount2.png"
+                  alt="Discount"
+                  class="h-32"
+                />
+                <span
+                  class="text-3xl font-bold ml-5"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #fb3c00,
+                      #fc5b00,
+                      #ffb800
+                    );
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                  "
+                  >Daily <br />
+                  Discount
+                </span>
+                <span
+                  class="h-32 mx-10"
+                  style="
+                    border-right: 0.12rem solid rgb(206, 199, 199);
+                    height: 100px;
+                    place-items: center;
+                  "
+                ></span>
+              </div>
+              <div class="flex place-items-center w-1/3 mx-10">
+                <img
+                  src="src/assets/location-bg.jpg"
+                  alt="Tracking"
+                  class="h-32"
+                />
+                <span
+                  class="text-3xl font-bold ml-5"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #fb3c00,
+                      #fc5b00,
+                      #ffb800
+                    );
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                  "
+                  >Live <br />
+                  Tracking
+                </span>
+                <span
+                  class="h-32 mx-10"
+                  style="
+                    border-right: 0.12rem solid rgb(206, 199, 199);
+                    height: 100px;
+                    place-items: center;
+                  "
+                ></span>
+              </div>
+              <div class="flex place-items-center w-1/3 ml-10">
+                <img
+                  src="src/assets/clock-bg.jpg"
+                  alt="Delivery"
+                  class="h-32"
+                />
+                <span
+                  class="text-3xl font-bold ml-5"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #fb3c00,
+                      #fc5b00,
+                      #ffb800
+                    );
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                  "
+                  >Quick <br />
+                  Delivery
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- LATEST NEWS  SECTION -->
+        <section
+          class="w-full mt-10 h-auto px-16 pb-20"
+          style="background-color: #edf5f4"
+        >
+          <h2
+            class="text-center text-4xl font-bold pt-8"
+            style="color: #f88100"
+          >
+            Latest News
+          </h2>
+          <div class="grid grid-flow-col grid-cols-3 mt-6">
+            <div
+              class="bg-white mx-3 hover:shadow-2xl hover:border-transparent transform transition duration-200 hover:bg-transparent ease-in-out hover:scale-105"
+            >
+              <img
+                src="src/assets/Latest1.jpg"
+                alt="Cooks working in Kitchen"
+                class="w-full h-56 hover:opacity-50"
+              />
+              <div class="p-6">
+                <h4 class="mb-3 font-medium text-base">
+                  Exciting Opportunity is here!
+                </h4>
+                <p class="text-[0.8rem]">
+                  Step into a world of flavor, culture, and culinary mastery as
+                  we proudly announce the opening of our much-anticipated
+                  culinary class dedicated to Nigeria's rich gastronomic
+                  heritage. Whether you're a seasoned chef eager to expand your
+                  repertoire or a passionate food enthusiast keen on exploring
+                  new tastes, our culinary journey promises to be an
+                  unforgettable experience. Read More >>
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white mx-3 hover:shadow-2xl hover:border-transparent transform transition duration-200 hover:bg-transparent ease-in-out hover:scale-105"
+            >
+              <img
+                src="src/assets/Latest2.jpg"
+                alt="Cooks working in Kitchen"
+                class="w-full h-56 hover:opacity-50"
+              />
+              <div class="p-6">
+                <h4 class="mb-3 font-normal">Local Food Events:</h4>
+                <p class="text-[0.8rem]">
+                  Stay informed about local food events happening in your area,
+                  including farmers' markets, food festivals, and cooking
+                  workshops. Indulge your taste buds and support your community
+                  at our upcoming local food event. Read More >>
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white mx-3 hover:shadow-2xl hover:border-transparent transform transition duration-200 hover:bg-transparent ease-in-out hover:scale-105"
+            >
+              <img
+                src="src/assets/Latest3.jpg"
+                alt="Cooks with glocery"
+                class="w-full h-56 hover:opacity-50"
+              />
+              <div class="p-6">
+                <h4 class="mb-3 font-normal">
+                  Food Sustainability Initiatives
+                </h4>
+                <p class="text-[0.8rem]">
+                  We are committed to promoting sustainability in the food
+                  industry. Our platform aims to empower consumers to make
+                  informed choices about their food consumption while supporting
+                  initiatives that prioritize environmental and social
+                  responsibility.Learn about sustainable sourcing, and
+                  initiatives to reduce food waste. Read More >>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex justify-center">
+            <i
+              class="fas fa-arrow-left bg-white mx-3 w-8 p-2 h-8 rounded-full"
+              style="background-color: #f8800015"
+            ></i>
+            <i
+              class="fa-solid fa-arrow-right bg-white mx-3 w-8 p-2 h-8 rounded-full"
+              style="background-color: #f8800015"
+            ></i>
+          </div>
+        </section>
         <!-- KNOW MORE ABOUT US SECTION -->
-        <!-- STATISTICS AND SUBSCRIPTION SECTION  -->
+        <section class="w-full mt-20 h-auto px-16 mb-20">
+          <div class="px-16 w-full">
+            <h2
+              class="text-center text-4xl font-bold mb-20"
+              style="color: #f88100"
+            >
+              <pre>FAQs</pre>
+            </h2>
+            <div class="flex justify-between">
+              <p class="font-semibold">What is Local Dish Corner</p>
+              <button class="moreBtn">
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="dropdown hidden absolute right-0 mt-8 px-32 w-full">
+                <p>
+                  Local Dish Corner is a platform that showcases local
+                  restaurants, food vendors, and culinary experiences. making it
+                  easier for people to discover, support, and enjoy the vibrant
+                  food culture of their community.
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-16">
+              <p class="font-semibold">How does it works?</p>
+              <button class="moreBtn">
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="dropdown hidden absolute right-0 mt-8 px-32 w-full">
+                <p>
+                  Place order through our website, Mobile App or with the use of
+                  our Whatsapp Business. You can track your order status with
+                  delivery time, Receive your order at a lightning-fast speed!
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-16">
+              <p class="font-semibold">What Payment method are accepted?</p>
+              <button class="moreBtn">
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="dropdown hidden absolute right-0 mt-8 px-32 w-full">
+                <p>
+                  you can Make Payment with the use of different payment
+                  platform such as Credit card/Debit Card, apple pay, Google pay
+                  for easy payment.
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between mb-16 mt-16">
+              <p class="font-semibold">
+                Are there any special discounts or promotions available?
+              </p>
+              <button class="moreBtn">
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="dropdown hidden absolute right-0 mt-8 px-32 w-full">
+                <p>
+                  Yes. At local DIsh Corner, There is always a discount on every
+                  first time user of our website or mobile App.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <!-- THE FOOTER GOES IN HERE -->
-      <footer class="absolute bottom-0 w-full h-auto bg-gray-200">
-        <section class="flex p-10 w-full">
+
+      <footer class="w-full h-auto">
+        <!-- INSTALL APP SECTION -->
+        <section class="w-full mt-10" style="background-color: #f88100">
+          <div class="out">
+            <div class="in flex p-80">
+              <div class="w-1/2">
+                <img
+                  src="src/assets/mobile-app.png"
+                  alt="mobile App"
+                  class="w-full ml-96 mr-24 pt-24"
+                />
+              </div>
+              <div class="1/2 ml-96 mr-52 px-10">
+                <h2 class="text-6xl font-bold mb-5" style="color: #fc8a06">
+                  Install the app
+                </h2>
+                <p class="text-lg mb-10" style="color: #8f9698">
+                  Join thousands of food lovers who have discovered the rich
+                  flavors of Nigeria's Culinary heritage with Local Dish corner.
+                  Download the app now for an exceptional services & dining
+                  experience!
+                </p>
+                <a href="/">
+                  <img
+                    src="src/assets/white-bg-google.jpg"
+                    alt=""
+                    class="w-48"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- STATISTICS AND SUBSCRIPTION SECTION  -->
+            <section class="w-full absolute bottom-80">
+              <div
+                class="absolute z-30 w-full h-28 flex justify-between"
+                style="background-color: #233b32"
+              >
+                <div class="w-1/4 flex justify-between">
+                  <div class="text-white text-center p-4 px-10">
+                    <p class="text-xl font-normal pt-4">546+</p>
+                    <p class="text-2xl font-semibold">Registered Riders</p>
+                  </div>
+                  <div
+                    class="my-2 mx-2"
+                    style="
+                      border-right: 0.12rem solid rgb(206, 199, 199);
+                      height: 100px;
+                      place-items: center;
+                    "
+                  ></div>
+                </div>
+                <div class="w-1/4 flex justify-between">
+                  <div class="text-white text-center p-4 px-10">
+                    <p class="text-xl font-light pt-4">789,900+</p>
+                    <p class="text-2xl font-semibold">Orders Delivered</p>
+                  </div>
+                  <div
+                    class="my-2 mx-2"
+                    style="
+                      border-right: 0.12rem solid rgb(206, 199, 199);
+                      height: 100px;
+                      place-items: center;
+                    "
+                  ></div>
+                </div>
+                <div class="w-1/4 flex justify-between">
+                  <div class="text-white text-center p-4 px-5">
+                    <p class="text-xl font-light pt-4">690+</p>
+                    <p class="text-2xl font-semibold">Restaurants Partnered</p>
+                  </div>
+                  <div
+                    class="my-2"
+                    style="
+                      border-right: 0.12rem solid rgb(206, 199, 199);
+                      height: 100px;
+                      place-items: center;
+                    "
+                  ></div>
+                </div>
+                <div class="w-1/4">
+                  <div class="text-white text-center p-4 justify-evenly">
+                    <p class="text-xl font-light pt-4">17,457+</p>
+                    <p class="text-2xl font-semibold">Food Items</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- SUBSCRIPTION Goes Here -->
+            <section
+              class="w-full flex absolute bottom-24 place-content-between z-40 px-20"
+            >
+              <div class="text-white text-center -mt-6">
+                <div class="flex">
+                  <img
+                    src="src/assets/newsletter.png"
+                    alt="Icon"
+                    class="inline mr-3 ml-0 h-16"
+                  />
+                  <p class="text-lg font-medium pt-6">Sign Up for Newsletter</p>
+                </div>
+                <p class="text-xs font-light -mt-1 ml-4">
+                  Sign up with us and get latest news about kitchen
+                </p>
+              </div>
+              <div class="flex">
+                <div
+                  type="submit"
+                  class="w-48 h-10 bg-white place-content-center text-black pl-3 rounded-l-lg"
+                >
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="youremail@gmail.com"
+                    class="place"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="text-white w-24 h-10 p-2 font-semibold rounded-lg -ml-3"
+                  style="background-color: #233b32"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Footer Links Here -->
+        <section
+          class="flex p-10 mt-0 w-full"
+          style="background-color: #e4e4e4"
+        >
           <div class="w-1/5 ml-2">
             <div class="w-full pt-2">
               <img
@@ -207,9 +1036,44 @@
             </div>
           </div>
         </section>
-        <section class="mt-6">
-          <div class="bg-green-700 h-16">
-            <div class="text-right flex p-4 float-right text-gray-200">
+        <!-- Cookies Goes Here -->
+        <section class="w-full">
+          <div
+            class="flex text-white h-28 px-10"
+            style="background-color: #8f9698"
+          >
+            <div class="w-full pr-6">
+              <div class="ml-12 h-10 flex mt-4 mb-2">
+                <img src="src/assets/Cookie-icon.png" alt="Cookie-icon" />
+                <h2 class="ml-3 pt-1 font-semibold">We Value Your Privacy</h2>
+              </div>
+
+              <br />
+              <p class="text-xs font-medium ml-10 tracking-wider -mt-6">
+                We use cookies to provide you with best possible experience.
+                They also allow us analyze user behavior in other to constantly
+                improve the website for you.
+              </p>
+            </div>
+            <div class="flex w-2/5 float-right ml-32 p-10">
+              <button
+                type="submit"
+                class="pb-4 px-3 border-solid border border-white rounded-2xl mr-8"
+              >
+                Reject All
+              </button>
+              <button
+                type="submit"
+                class="pb-4 px-3 border-solid border-white rounded-2xl"
+                style="background-color: #233b32"
+              >
+                Accept All
+              </button>
+            </div>
+          </div>
+          <!-- PRIVACY POLICY HERE -->
+          <section class="bg-green-700 h-16">
+            <div class="text-right text-xs flex p-6 float-right text-gray-200">
               <span class="mr-10">Privacy Policy</span>
               <span class="mr-10">Terms</span>
               <span class="mr-10">Pricing</span>
@@ -217,7 +1081,7 @@
                 >Do not sell or share my personal information</span
               >
             </div>
-          </div>
+          </section>
         </section>
       </footer>
     </div>
