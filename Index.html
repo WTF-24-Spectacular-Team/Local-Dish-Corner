@@ -34,11 +34,29 @@
         transition-timing-function: ease-in-out;
       }
       .custom-css:hover {
-        width: 210px;
+        width: 13.5rem;
+      }
+      .custom-css:focus {
+        width: 13.5rem;
+      }
+      .out {
+        width: 100%;
+        overflow: hidden;
+        background-color: #f88100;
+        position: relative;
       }
 
-      .custom-css:focus {
-        display: block;
+      .in {
+        width: 180%;
+        height: 80%;
+        border-radius: 100%;
+        background-color: #feefcf;
+        position: absolute;
+        left: -45%;
+        top: -150px;
+      }
+      .place::placeholder {
+        color: #000000;
       }
     </style>
   </head>
@@ -151,18 +169,19 @@
                 class="absolute text-center mt-3 mb-4 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
               >
                 <h1
-                  class="text-3xl pb-2 text-black tracking-wide font-semibold"
+                  class="text-5xl pb-12 tracking-wider font-bold text-center"
+                  style="color: #f88100"
                 >
-                  &nbsp;&nbsp;&nbsp; &nbsp;Savor the Flavor, Discover <br />
-                  &nbsp;&nbsp;&nbsp;Local Cuisine Gems Near You
+                  &nbsp;&nbsp;&nbsp; &nbsp;Savor the Flavor, Discover Local
+                  <br />Cuisine Gems Near You
                 </h1>
-                <p class="text-x mt-4 tracking-wide">
-                  Bringing the Rich Tapestry of Local Cuisine <br />
-                  &nbsp;Right to Your Fingertips - Taste, Support, <br />
-                  &nbsp;&nbsp;and Enjoy the Best of Your Community!
+                <p class="text-xl font-normal mt-4 tracking-wide">
+                  Bringing the Rich Tapestry of Local Cuisine Right to Your
+                  Fingertips - <br />Taste, Support, and Enjoy the Best of Your
+                  Community!
                 </p>
                 <button
-                  class="mx-40 mt-10 rounded-md text-white px-6 py-3 hover:bg-red-500 cursor-pointer outline-none"
+                  class="w-56 mx-40 text-base tracking-wide mt-10 rounded-md text-white px-6 py-3 hover:bg-red-500 cursor-pointer outline-none"
                   style="background-color: #f88100"
                 >
                   Explore Local Cuisine
@@ -182,7 +201,8 @@
                   ><img
                     src="src/assets/img-247-no-bg.png"
                     alt="24 7 icon"
-                    width="30"
+                    width="33"
+                    class="object-cover"
                   />
                   <span class="ml-3 text-sm mt-2"
                     >We offer round the clock customer service</span
@@ -335,15 +355,17 @@
         </section>
         <!-- TOP VENDORS -->
         <section
-          class="mt-32 mb-8 pt-16 pr-24 pl-16 w-full h-auto"
+          class="mt-36 mb-8 pt-28 pr-24 pl-16 w-full h-auto"
           style="background-color: #edf5f3"
         >
           <h2
-            class="text-black text-center pb-5 font-semibold text-xl tracking-wider"
+            class="justify-center pb-5 font-bold text-4xl tracking-wider flex"
+            style="color: #f88100"
           >
             Top Vendors
           </h2>
-          <div class="grid grid-cols-3 mb-0">
+          <button class="float-right font-bold text-lg">View All ></button>
+          <div class="grid grid-cols-3 mt-7 mb-0">
             <div class="w-80 m-6 relative">
               <img
                 src="./src/assets/Amala_sky.jpg"
@@ -500,36 +522,51 @@
           </div>
         </section>
         <!-- PARTNERS SECTION -->
-        <section class="w-full mt-20 h-auto text-black px-16">
-          <h2 class="font-bold mt-10 text-center mb-10 text-2xl">Partners</h2>
+        <section class="w-full mt-20 h-auto px-16">
+          <h2
+            class="font-bold mt-10 text-center mb-10 text-4xl"
+            style="color: #f88100"
+          >
+            Partners
+          </h2>
           <div class="flex w-full">
-            <div class="w-8/12 pr-12 relative">
+            <div class="w-8/12 pr-12 relative pl-6">
               <img
                 src="src/assets/partner_img-cropped.jpg"
                 alt="Image of Partners in their element"
-                class="w-full"
+                class="w-full h-96 rounded-bl-xl"
               />
               <div
-                class="absolute h-full top-0 -left-2 w-11/12 bg-black bg-transparent bg-opacity-5 bg-gradient-to-tr from-zinc-900"
+                class="absolute h-full ml-3 top-0 left-0 w-11/12 bg-black bg-opacity-5 from-black from-80% via-transparent bg-gradient-to-tr rounded-b-2xl"
               >
                 <div
-                  class="absolute z-50 bg-white text-lg font-semibold rounded-b-md top-0 left-0 h-auto w-5/12 py-2 text-center"
+                  class="absolute z-50 bg-white text-base font-medium rounded-b-md top-0 left-0 h-auto w-5/12 py-2 text-center"
                 >
                   Earn more with lower fees
                 </div>
                 <div
-                  class="absolute text-center mt-3 mb-4 left-1/2 top-1/2 w-full"
-                ></div>
+                  class="absolute text-center mt-3 mb-4 left-36 top-64 transform -translate-x-1/2 -translate-y-1/2 w-full"
+                >
+                  <p
+                    class="font-semibold text-xl tracking-wide"
+                    style="color: #f88100"
+                  >
+                    Signup as a business
+                  </p>
+                  <p class="ml-40 text-white font-bold text-5xl">
+                    Partner With Us
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="w-1/3 h-auto justify-end">
+            <div class="w-1/3 h-text-end text-[0.88rem]">
               <p>
                 In the digital age, Local Dish Corner has witnessed a
                 signifiacnt transformation, with online platforms emerging as
                 crucial avenues for culinary exploration, recipe sharing, and
                 gastronomic delight. Partnering with us presents a myriad of
                 opportunities for culinary enthusiasts, food businesses, and
-                bfans alike to expand their reach, engage with a broader
+                brands alike to expand their reach, engage with a broader
                 audience, and cultivate meaningful connections within the
                 vibrant food community.
               </p>
@@ -545,14 +582,378 @@
           </div>
         </section>
         <!-- SERVICES RENDERED SECTION -->
+        <section class="w-full mt-20 mb-20 h-auto flex">
+          <div
+            class="h-72 w-full px-28 flex justify-center items-center"
+            style="background-color: #feedcb"
+          >
+            <div class="bg-white w-full h-56 rounded-3xl flex px-16">
+              <div class="flex place-items-center w-1/3 mr-10">
+                <img
+                  src="src/assets/discount2.png"
+                  alt="Discount"
+                  class="h-32"
+                />
+                <span
+                  class="text-3xl font-bold ml-5"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #fb3c00,
+                      #fc5b00,
+                      #ffb800
+                    );
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                  "
+                  >Daily <br />
+                  Discount
+                </span>
+                <span
+                  class="h-32 mx-10"
+                  style="
+                    border-right: 0.12rem solid rgb(206, 199, 199);
+                    height: 100px;
+                    place-items: center;
+                  "
+                ></span>
+              </div>
+              <div class="flex place-items-center w-1/3 mx-10">
+                <img
+                  src="src/assets/location-bg.jpg"
+                  alt="Tracking"
+                  class="h-32"
+                />
+                <span
+                  class="text-3xl font-bold ml-5"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #fb3c00,
+                      #fc5b00,
+                      #ffb800
+                    );
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                  "
+                  >Live <br />
+                  Tracking
+                </span>
+                <span
+                  class="h-32 mx-10"
+                  style="
+                    border-right: 0.12rem solid rgb(206, 199, 199);
+                    height: 100px;
+                    place-items: center;
+                  "
+                ></span>
+              </div>
+              <div class="flex place-items-center w-1/3 ml-10">
+                <img
+                  src="src/assets/clock-bg.jpg"
+                  alt="Delivery"
+                  class="h-32"
+                />
+                <span
+                  class="text-3xl font-bold ml-5"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #fb3c00,
+                      #fc5b00,
+                      #ffb800
+                    );
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                  "
+                  >Quick <br />
+                  Delivery
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- LATEST NEWS  SECTION -->
+        <section
+          class="w-full mt-10 h-auto px-16 pb-20"
+          style="background-color: #edf5f4"
+        >
+          <h2
+            class="text-center text-4xl font-bold pt-8"
+            style="color: #f88100"
+          >
+            Latest News
+          </h2>
+          <div class="grid grid-flow-col grid-cols-3 mt-6">
+            <div
+              class="bg-white mx-3 hover:shadow-2xl hover:border-transparent transform transition duration-200 hover:bg-transparent ease-in-out hover:scale-105"
+            >
+              <img
+                src="src/assets/Latest1.jpg"
+                alt="Cooks working in Kitchen"
+                class="w-full h-56 hover:opacity-50"
+              />
+              <div class="p-6">
+                <h4 class="mb-3 font-medium text-base">
+                  Exciting Opportunity is here!
+                </h4>
+                <p class="text-[0.8rem]">
+                  Step into a world of flavor, culture, and culinary mastery as
+                  we proudly announce the opening of our much-anticipated
+                  culinary class dedicated to Nigeria's rich gastronomic
+                  heritage. Whether you're a seasoned chef eager to expand your
+                  repertoire or a passionate food enthusiast keen on exploring
+                  new tastes, our culinary journey promises to be an
+                  unforgettable experience. Read More >>
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white mx-3 hover:shadow-2xl hover:border-transparent transform transition duration-200 hover:bg-transparent ease-in-out hover:scale-105"
+            >
+              <img
+                src="src/assets/Latest2.jpg"
+                alt="Cooks working in Kitchen"
+                class="w-full h-56 hover:opacity-50"
+              />
+              <div class="p-6">
+                <h4 class="mb-3 font-normal">Local Food Events:</h4>
+                <p class="text-[0.8rem]">
+                  Stay informed about local food events happening in your area,
+                  including farmers' markets, food festivals, and cooking
+                  workshops. Indulge your taste buds and support your community
+                  at our upcoming local food event. Read More >>
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white mx-3 hover:shadow-2xl hover:border-transparent transform transition duration-200 hover:bg-transparent ease-in-out hover:scale-105"
+            >
+              <img
+                src="src/assets/Latest3.jpg"
+                alt="Cooks with glocery"
+                class="w-full h-56 hover:opacity-50"
+              />
+              <div class="p-6">
+                <h4 class="mb-3 font-normal">
+                  Food Sustainability Initiatives
+                </h4>
+                <p class="text-[0.8rem]">
+                  We are committed to promoting sustainability in the food
+                  industry. Our platform aims to empower consumers to make
+                  informed choices about their food consumption while supporting
+                  initiatives that prioritize environmental and social
+                  responsibility.Learn about sustainable sourcing, and
+                  initiatives to reduce food waste. Read More >>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex justify-center">
+            <i
+              class="fas fa-arrow-left bg-white mx-3 w-8 p-2 h-8 rounded-full"
+              style="background-color: #f8800015"
+            ></i>
+            <i
+              class="fa-solid fa-arrow-right bg-white mx-3 w-8 p-2 h-8 rounded-full"
+              style="background-color: #f8800015"
+            ></i>
+          </div>
+        </section>
         <!-- KNOW MORE ABOUT US SECTION -->
+        <section class="w-full mt-20 h-auto px-16">
+          <div class="px-16 w-full">
+            <h2
+              class="text-center text-4xl font-bold mb-20"
+              style="color: #f88100"
+            >
+              <pre>FAQs</pre>
+            </h2>
+            <div class="flex justify-between">
+              <p class="font-semibold">What is Local Dish Corner</p>
+              <button class="moreBtn">
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="dropdown hidden absolute right-0 mt-8 px-32 w-full">
+                <p>
+                  Local Dish Corner is a platform that showcases local
+                  restaurants, food vendors, and culinary experiences. making it
+                  easier for people to discover, support, and enjoy the vibrant
+                  food culture of their community.
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-16">
+              <p class="font-semibold">How does it works?</p>
+              <button class="moreBtn">
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="dropdown hidden absolute right-0 mt-8 px-32 w-full">
+                <p>
+                  Place order through our website, Mobile App or with the use of
+                  our Whatsapp Business. You can track your order status with
+                  delivery time, Receive your order at a lightning-fast speed!
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-16">
+              <p class="font-semibold">What Payment method are accepted?</p>
+              <button class="moreBtn">
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="dropdown hidden absolute right-0 mt-8 px-32 w-full">
+                <p>
+                  you can Make Payment with the use of different payment
+                  platform such as Credit card/Debit Card, apple pay, Google pay
+                  for easy payment.
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between mb-16 mt-16">
+              <p class="font-semibold">
+                Are there any special discounts or promotions available?
+              </p>
+              <button class="moreBtn">
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="dropdown hidden absolute right-0 mt-8 px-32 w-full">
+                <p>
+                  Yes. At local DIsh Corner, There is always a discount on every
+                  first time user of our website or mobile App.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- INSTALL APP SECTION -->
+        <section class="w-full mt-10 h-screen mb-60">
+          <div
+            class="w-full h-full flex px-16 relative z-20"
+            style="background-color: #feefcf"
+          >
+            <div class="mt-44 w-1/2 h-auto relative">
+              <img
+                src="src/assets/mobile-app.png"
+                alt="Local Dish Corner Mobile App"
+                class="object-cover h-auto w-full absolute z-50"
+              />
+            </div>
+            <div class="pl-20 w-1/2 mt-24">
+              <h2
+                class="text-6xl font-bold tracking-tight mb-4"
+                style="color: #fc8906c1"
+              >
+                Install the app
+              </h2>
+              <p class="text-lg text-gray-500">
+                Join thousands of food lovers who have discovered the rich
+                flavors of Nigeria's Culinary heritage with Local Dish Corner.
+                Download the app now for an exceptional services & dining
+                experience!
+              </p>
+              <button class="mt-10 w-44">
+                <img
+                  src="src/assets/white-bg-google.jpg"
+                  alt="Link to download from google"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="out h-screen -mt-64">
+            <div class="in"></div>
+          </div>
+        </section>
       </main>
       <!-- THE FOOTER GOES IN HERE -->
-      <footer class="mt-10 w-full h-auto bg-gray-200">
+
+      <footer class="w-full h-auto">
         <!-- STATISTICS AND SUBSCRIPTION SECTION  -->
-        <section class="flex p-10 w-full">
+        <section class="w-full relative">
+          <div
+            class="absolute z-30 w-full h-28 -mt-32 flex justify-between"
+            style="background-color: #233b32"
+          >
+            <div class="w-1/4 flex justify-between">
+              <div class="text-white text-center p-4 px-10">
+                <p class="text-xl font-normal pt-4">546+</p>
+                <p class="text-2xl font-semibold">Registered Riders</p>
+              </div>
+              <div
+                class="my-2 mx-2"
+                style="
+                  border-right: 0.12rem solid rgb(206, 199, 199);
+                  height: 100px;
+                  place-items: center;
+                "
+              ></div>
+            </div>
+            <div class="w-1/4 flex justify-between">
+              <div class="text-white text-center p-4 px-10">
+                <p class="text-xl font-light pt-4">789,900+</p>
+                <p class="text-2xl font-semibold">Orders Delivered</p>
+              </div>
+              <div
+                class="my-2 mx-2"
+                style="
+                  border-right: 0.12rem solid rgb(206, 199, 199);
+                  height: 100px;
+                  place-items: center;
+                "
+              ></div>
+            </div>
+            <div class="w-1/4 flex justify-between">
+              <div class="text-white text-center p-4 px-5">
+                <p class="text-xl font-light pt-4">690+</p>
+                <p class="text-2xl font-semibold">Restaurants Partnered</p>
+              </div>
+              <div
+                class="my-2"
+                style="
+                  border-right: 0.12rem solid rgb(206, 199, 199);
+                  height: 100px;
+                  place-items: center;
+                "
+              ></div>
+            </div>
+            <div class="w-1/4">
+              <div class="text-white text-center p-4 justify-evenly">
+                <p class="text-xl font-light pt-4">17,457+</p>
+                <p class="text-2xl font-semibold">Food Items</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="w-full h-48 mt-20 flex place-content-between px-28 z-30"
+          style="background-color: #f88100"
+        >
+          <div class="text-white mt-20 text-center">
+            <p class="text-lg font-medium">Sign Up for Newsletter</p>
+            <p class="text-xs font-light">
+              Sign up with us and get latest news about kitchen
+            </p>
+          </div>
+          <div class="mt-24 flex">
+            <button
+              type="submit"
+              class="w-48 h-10 bg-white place-content-center text-black py-2 pl-3 rounded-l-lg"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="youremail@gmail.com"
+                class="place"
+              />
+            </button>
+            <div
+              class="text-white w-24 h-10 p-2 font-semibold rounded-lg -ml-3"
+              style="background-color: #233b32"
+            >
+              Subscribe
+            </div>
+          </div>
+        </section>
+        <section class="flex p-10 w-full bg-gray-200">
           <div class="w-1/5 ml-2">
             <div class="w-full pt-2">
               <img
@@ -627,7 +1028,39 @@
             </div>
           </div>
         </section>
-        <section class="mt-6">
+        <section class="w-full">
+          <div
+            class="flex text-white h-24 px-10"
+            style="background-color: #8f9698"
+          >
+            <div class="w-full p-3">
+              <div class="ml-8 h-12 inline">
+                <i class="fas fa-cookie-bite" style="color: #ffffff"></i>
+              </div>
+              <h2 class="ml-1 inline">We Value Your Privacy</h2>
+              <br />
+              <p class="text-xs font-semibold ml-16 tracking-wider pt-2">
+                We use cookies to make your browsing experience sweeter! Cookies
+                help us analyze traffic and show you personalized <br />content.
+                By clicking "accept all" you are given us permission to treat
+                you to a cookie or two.
+              </p>
+            </div>
+            <div class="flex w-1/3 place-content-evenly p-8">
+              <button
+                type="submit"
+                class="pb-4 px-3 border-solid border-2 border-white rounded-2xl"
+              >
+                Reject All
+              </button>
+              <button
+                type="submit"
+                class="pb-4 px-3 border-solid border-2 border-white rounded-2xl"
+              >
+                Accept All
+              </button>
+            </div>
+          </div>
           <div class="bg-green-700 h-16">
             <div class="text-right text-xs flex p-6 float-right text-gray-200">
               <span class="mr-10">Privacy Policy</span>
