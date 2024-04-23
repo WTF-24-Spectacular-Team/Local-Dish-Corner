@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./src/assets/favicon_io/favicon.ico"
+      href="/src/assets/favicon_io/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="/output.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -144,42 +144,57 @@
             My Shopping Cart
           </h1>
           <div class="w-full flex place-content-between h-40">
-            <div>
+            <div class="w-4/5">
               <div class="border border-neutral-700 w-full rounded-lg">
                 <div
                   class="w-auto flex place-content-between border-b border-neutral-700 h-8 rounded-lg"
                   style="color: #878282"
                 >
-                  <p class="w-40 mr-44 ml-2">PRODUCT</p>
+                  <p class="w-40 mr-32 ml-2">PRODUCT</p>
                   <p class="w-20 mr-16">PRICE</p>
                   <p class="w-20 mr-16">QUANTITY</p>
-                  <p class="w-20 mr-10">SUBTOTAL</p>
+                  <p class="w-20 mr-20">SUBTOTAL</p>
                 </div>
-                <div class="flex border-b border-neutral-700 h-28 p-10">
-                  <img src="" alt="" />
-                  <span></span>
-                  <span class="ml-80">NGN </span>
-                  <span></span>
-                  <div class="float-right ml-12 flex">
-                    <div class="w-28 border rounded-2xl flex px-2">
-                      <button type="button">
-                        <i
-                          class="fas fa-minus rounded-full w-8 h-8 p-2"
-                          style="color: #000000; background-color: #e4e4e4"
-                        ></i>
-                      </button>
-                      <span class="ml-5"></span>
-                      <button type="button" class="ml-7">
-                        <i
-                          class="fas fa-plus rounded-full w-8 h-8 p-2"
-                          style="color: #000000; background-color: #e4e4e4"
-                        ></i>
+                <div
+                  id="tracking"
+                  class="flex border-b border-neutral-700 h-28"
+                >
+                  <img
+                    id="image"
+                    src=""
+                    alt=""
+                    class="w-20 object-cover h-20 my-4 ml-4"
+                  />
+
+                  <div class="float-right py-10">
+                    <span id="food" class="ml-6"></span>
+                    <span id="price" class="ml-6"></span>
+
+                    <div class="float-right flex">
+                      <div class="w-32 border rounded-2xl flex ml-10">
+                        <button id="add-less" type="button" class="mx-2">
+                          <i
+                            class="fas fa-minus rounded-full w-7 h-7 p-2"
+                            style="color: #000000; background-color: #e4e4e4"
+                          ></i>
+                        </button>
+                        <span id="quantity" class="mx-4 pt-1"></span>
+                        <button id="add-more" type="button" class="mx-2">
+                          <i
+                            class="fas fa-plus rounded-full w-7 h-7 p-2"
+                            style="color: #000000; background-color: #e4e4e4"
+                          ></i>
+                        </button>
+                      </div>
+                      <span id="subtotal" class="font-medium mr-4 ml-8"> </span>
+                      <button
+                        type="button"
+                        class="mx-3 border rounded-full w-7"
+                        id="clear"
+                      >
+                        <i class="fas fa-times" style="color: #000000"></i>
                       </button>
                     </div>
-                    <span class="font-medium mr-12 ml-12">NGN </span>
-                    <button type="button" class="mr-0 border rounded-full w-7">
-                      <i class="fas fa-times" style="color: #000000"></i>
-                    </button>
                   </div>
                 </div>
                 <div class="h-20">
@@ -191,26 +206,43 @@
                   >
                 </div>
               </div>
+              <div
+                class="flex border border-neutral-700 mt-2 w-full py-4 rounded-xl px-2"
+              >
+                <p class="font-medium mr-3 pt-2">Coupon Code</p>
+                <input
+                  type="text"
+                  placeholder="Enter code"
+                  class="border rounded-3xl p-3 w-2/3 -mr-12"
+                />
+                <button
+                  type="submit"
+                  class="text-white bg-black w-44 rounded-3xl"
+                >
+                  Apply Coupon
+                </button>
+              </div>
             </div>
             <div
-              class="w-96 h-56 border border-neutral-700 rounded-2xl px-8 ml-4"
+              class="w-2/5 h-56 border border-neutral-700 rounded-2xl px-8 mx-8"
             >
               <h3 class="font-semibold p-3">Cart Total</h3>
               <div class="flex border-b border-neutral-700">
-                <p class="pb-2">Subtotal</p>
-                <span class="ml-36">NGN </span>
+                <p class="pb-2">
+                  Subtotal: <span class="ml-24" id="bills"></span>
+                </p>
               </div>
               <div class="border-b flex py-3">
                 <p>Delivery:</p>
-                <span class="ml-36">NGN </span>
+                <span class="ml-28" id="delivery"></span>
               </div>
               <div class="flex py-3">
                 <p>Total:</p>
-                <span class="ml-40">NGN </span>
+                <span class="ml-32" id="total"></span>
               </div>
               <button
                 type="button"
-                class="px-12 py-2 rounded-3xl mt-1 mx-5"
+                class="px-12 py-2 rounded-3xl mb-2 w-full"
                 style="background-color: #00b207"
               >
                 <a href="/" class="text-white font-semibold"
@@ -219,25 +251,12 @@
               </button>
             </div>
           </div>
-          <div
-            class="flex border border-neutral-700 mt-20 w-2/3 py-4 rounded-xl px-2"
-          >
-            <p class="font-medium mr-3 pt-2">Coupon Code</p>
-            <input
-              type="text"
-              placeholder="Enter code"
-              class="border rounded-3xl p-3 w-2/3 -mr-12"
-            />
-            <button type="submit" class="text-white bg-black w-44 rounded-3xl">
-              Apply Coupon
-            </button>
-          </div>
         </section>
       </main>
       <!-- THE FOOTER GOES IN HERE -->
       <footer class="w-full h-auto">
         <!-- INSTALL APP SECTION -->
-        <section class="w-full mt-10 h-52" style="background-color: #f88100">
+        <section class="w-full mt-44 h-52" style="background-color: #f88100">
           <div class="">
             <!-- SUBSCRIPTION Goes Here -->
             <section class="w-full flex place-content-between z-40 px-20">
@@ -407,6 +426,7 @@
         </section>
       </footer>
     </div>
-    <script src="../Js/main.js"></script>
+    <script src="/src/Js/main.js"></script>
+    <script src="/src/Js/data.js"></script>
   </body>
 </html>
