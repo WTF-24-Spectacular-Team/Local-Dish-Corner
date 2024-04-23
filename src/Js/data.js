@@ -9,7 +9,7 @@ const details = [
   },
   {
     id: 2,
-    image: "/src/assets/Nkwobi.png",
+    image: "/src/assets/nkwobi2.png",
     type: "Nkwobi",
     price: 4000,
     quantity: 1,
