@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Local Dish Corner Shopping Cart</title>
+    <style>
+      .place::placeholder {
+        color: #000000;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container box-border">
+      <!-- HEADER SPACE -->
+      <header class="flex z-50 w-full fixed h-24 top-0 bg-white">
+        <nav class="px-3 items-center flex bg-white justify-between w-full">
+          <!-- Logo -->
+          <div class="w-1/5">
+            <img
+              src="/src/assets/logo-no-bg1.png"
+              alt="Logo"
+              class="w-3/4 object-cover ml-4 mr-0"
+            />
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="flex items-center justify-center ml-0 w-4/5">
+            <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
+            <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5"
+              >Explore Local Cuisine</a
+            >
+            <a href="#" class="text-deep-grey p-1 rounded ml-2 mr-5">Vendor</a>
+
+            <!-- More Dropdown -->
+            <div class="relative mr-5 ml-2 p-1 inline-block text-left">
+              <div>
+                <a
+                  href="#"
+                  id="moreButton"
+                  class="text-deep-grey mr-5 rounded p-1 focus:outline-none"
+                >
+                  More <i class="fas fa-angle-down"></i>
+                </a>
+              </div>
+              <div
+                id="dropdownList"
+                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-pri-orange border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
+              >
+                <!-- <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Item 1</a
+                > -->
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Event Planner Corner</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Culinary ScholarShip Opportunity</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >About Us</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+
+            <!-- Search -->
+            <div class="relative mr-5">
+              <input
+                type="text"
+                class="border-none focus:outline-none px-3 py-1 rounded-md pl-10 bg-gray-200 text-base"
+                placeholder="Search local cuisine"
+              />
+              <div class="absolute top-0 left-0 flex items-center h-full px-3">
+                <i class="fas fa-search text-gray-400"></i>
+              </div>
+            </div>
+
+            <!-- Sign Up and Login Buttons -->
+            <div class="ml-2">
+              <button
+                type="submit"
+                class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
+              >
+                Sign Up
+              </button>
+              <button
+                class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
+                type="submit"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- THIS IS MAIN SPACE -->
+      <main>
+        <!-- HERO SECTION -->
+        <section class="h-14 w-full mt-24">
+          <img
+            src="/src/assets/Hero-shopping.png"
+            alt="Rice and Chicken Image"
+          />
+        </section>
+        <!-- MY SHOPPING CART SECTION -->
+        <section class="w-full px-16">
+          <div class="flex w-full">
+            <div class="w-4/6">
+              <h2>Billing Information</h2>
+              <form action="/submit" method="post">
+                <div>
+                  <div class="flex">
+                    <div>
+                      <label for="fname">First name</label>
+                      <input
+                        type="text"
+                        name="fname"
+                        placeholder="Your first name"
+                      />
+                    </div>
+                    <div>
+                      <label for="fname">Last name</label>
+                      <input
+                        type="text"
+                        name="lname"
+                        placeholder="Your last name"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="address">Street Address</label>
+                    <input type="text" name="address" placeholder="Address" />
+                  </div>
+                  <div class="flex">
+                    <div>
+                      <label for="country"> Country / Region </label>
+                      <select name="country" id="country">
+                        <input placeholder="Select" />
+                        <option>Nigeria</option>
+                        <option>Ghana</option>
+                        <option>Kenya</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="state">State</label>
+                      <select name="state" id="state">
+                        <input placeholder="Select" />
+                        <option>Lagos</option>
+                        <option>Abuja</option>
+                        <option>Calabar</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <div>
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email Address"
+                      />
+                    </div>
+                    <div>
+                      <label for="phone">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="Phone number"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="w-2/6">
+              <h2>Order Summary</h2>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- THE FOOTER GOES IN HERE -->
+      <footer class="w-full h-auto">
+        <!-- INSTALL APP SECTION -->
+        <section class="w-full mt-44 h-52" style="background-color: #f88100">
+          <div class="">
+            <!-- SUBSCRIPTION Goes Here -->
+            <section class="w-full flex place-content-between z-40 px-20">
+              <div class="text-white text-center mt-20">
+                <div class="flex">
+                  <img
+                    src="/src/assets/newsletter.png"
+                    alt="Icon"
+                    class="inline mr-3 ml-0 h-16"
+                  />
+                  <p class="text-lg font-medium pt-6">Sign Up for Newsletter</p>
+                </div>
+                <p class="text-xs font-light -mt-1 ml-4">
+                  Sign up with us and get latest news about kitchen
+                </p>
+              </div>
+              <div class="flex mt-28">
+                <div
+                  type="submit"
+                  class="w-48 h-10 bg-white place-content-center text-black pl-3 rounded-l-lg"
+                >
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="youremail@gmail.com"
+                    class="place"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="text-white w-24 h-10 p-2 font-semibold rounded-lg -ml-3"
+                  style="background-color: #233b32"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Footer Links Here -->
+        <section
+          class="flex p-10 mt-0 w-full"
+          style="background-color: #e4e4e4"
+        >
+          <div class="w-1/5 ml-2">
+            <div class="w-full pt-2">
+              <img
+                src="/src/assets/logo-no-bg1.png"
+                alt="Brand"
+                class="object-cover w-3/4 m-auto"
+              />
+            </div>
+            <div class="w-full">
+              <div class="w-full flex">
+                <a href="#" class="w-full m-0 p-0 justify-center block">
+                  <img
+                    src="/src/assets/App_Store_(iOS)-Badge-Logo.wine.svg"
+                    alt="Apple Badge"
+                  />
+                </a>
+                <a href="#" class="w-full block m-4 p-0 justify-center">
+                  <img
+                    src="/src/assets/google-badge.png"
+                    alt="Google Play Badge"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="block">
+              <p class="text-xs font-bold">
+                Company # 490039-445, Registered with House of companies.
+              </p>
+            </div>
+          </div>
+          <div class="w-4/5 flex ml-6 mr-6 font-bold">
+            <div class="w-2/12 ml-2 -mr-1">
+              <h2 class="mb-2 font-bold">COMPANY</h2>
+              <p class="block mb-2 text-xs">Customers</p>
+              <p class="block mb-2 text-xs">Vendors</p>
+              <p class="block mb-2 text-xs">FAQS</p>
+              <p class="block mb-2 text-xs">Riders</p>
+              <p class="block mb-2 text-xs">Blogs</p>
+              <p class="block mb-2 text-xs">Careers</p>
+              <p class="block mb-2 text-xs">About</p>
+              <p class="block mb-2 text-xs">Contacts</p>
+            </div>
+            <div class="w-3/12 mr-2 ml-4">
+              <h3 class="mb-2 font-bold text-base -ml-1 mr-2">
+                LOCAL CUISINE NEAR YOU
+              </h3>
+              <p class="block mb-2 text-xs">Amala Sky</p>
+              <p class="block mb-2 text-xs">Uchenna Spot</p>
+              <p class="block mb-2 text-xs">God Grace Spot</p>
+              <p class="block mb-2 text-xs">CHop Life Kitchen</p>
+              <p class="block mb-2 text-xs">Mallam Musa Suya Spot</p>
+            </div>
+            <div class="w-2/12 mr-2">
+              <h2 class="mb-2 mr-1 font-bold">POPULAR KITCHEN</h2>
+              <p class="block mb-2 text-xs">Amala Sky</p>
+              <p class="block mb-2 text-xs">Uchenna Spot</p>
+              <p class="block mb-2 text-xs">Chop Life Kitchen</p>
+              <p class="block mb-2 text-xs">Mallam Musa Suya Spot</p>
+            </div>
+            <div class="w-2/12 ml-2 mr-2">
+              <h2 class="mb-2 font-bold">LEGAL PAGES</h2>
+              <p class="block mb-2 text-xs">Terms and Condition</p>
+              <p class="block mb-2 text-xs">Privacy</p>
+              <p class="block mb-2 text-xs">cookies</p>
+            </div>
+            <div class="w-2/12">
+              <h2 class="mb-2 font-bold">IMPORTANT LINKS</h2>
+              <p class="block mb-2 text-xs">Get help</p>
+              <p class="block mb-2 text-xs">Add your restaurant</p>
+              <p class="block mb-2 text-xs">Sign up to deliver</p>
+              <p class="block mb-2 text-xs">Create a business aacount</p>
+            </div>
+          </div>
+        </section>
+        <!-- Cookies Goes Here -->
+        <section class="w-full">
+          <div
+            class="flex text-white h-28 px-10"
+            style="background-color: #8f9698"
+          >
+            <div class="w-full pr-6">
+              <div class="ml-12 h-10 flex mt-4 mb-2">
+                <img src="/src/assets/Cookie-icon.png" alt="Cookie-icon" />
+                <h2 class="ml-3 pt-1 font-semibold">We Value Your Privacy</h2>
+              </div>
+
+              <br />
+              <p class="text-xs font-medium ml-10 tracking-wider -mt-6">
+                We use cookies to provide you with best possible experience.
+                They also allow us analyze user behavior in other to constantly
+                improve the website for you.
+              </p>
+            </div>
+            <div class="flex w-2/5 float-right ml-32 p-10">
+              <button
+                type="submit"
+                class="pb-4 px-3 border-solid border border-white rounded-2xl mr-8"
+              >
+                Reject All
+              </button>
+              <button
+                type="submit"
+                class="pb-4 px-3 border-solid border-white rounded-2xl"
+                style="background-color: #233b32"
+              >
+                Accept All
+              </button>
+            </div>
+          </div>
+          <!-- PRIVACY POLICY HERE -->
+          <section class="bg-green-700 h-16">
+            <div
+              class="text-right text-xs flex p-6 float-right text-gray-200 font-bold"
+            >
+              <span class="mr-10">Privacy Policy</span>
+              <span class="mr-10">Terms</span>
+              <span class="mr-10">Pricing</span>
+              <span class="mr-10"
+                >Do not sell or share my personal information</span
+              >
+            </div>
+          </section>
+        </section>
+      </footer>
+    </div>
+    <script src="/src/Js/main.js"></script>
+    <script src="/src/Js/data.js"></script>
+  </body>
+</html>
