@@ -104,3 +104,9 @@ const updateQuantity = () => {
   updateBill();
   sumTotal();
 };
+
+const selectedFood = details
+  .map((item) => `id=${item.id}&quantity=${item.quantity}`)
+  .join("&");
+
+windows.location.href = `/payment?${selectedFood}`;

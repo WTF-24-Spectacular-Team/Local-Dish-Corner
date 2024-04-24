@@ -25,11 +25,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
-    <title>Local Dish Corner Shopping Cart</title>
+    <title>Local Dish Corner Billing</title>
     <style>
       .place::placeholder {
         color: #000000;
         font-size: small;
+      }
+      .checker:checked {
+        background-color: #00b207;
       }
     </style>
   </head>
@@ -232,55 +235,101 @@
                       />
                     </div>
                   </div>
-                  <input
-                    type="checkbox"
-                    name="save-address"
-                    id="save-address"
-                    class="mr-2 my-4 bg-gray-200"
-                  />
-                  <label for="save-address" class="text-sm my-4"
-                    >Save Address</label
-                  >
+                  <div class="flex my-4">
+                    <input
+                      type="checkbox"
+                      name="save-address"
+                      id="save-address"
+                      class="checker mr-1 cursor-pointer"
+                    />
+                    <label for="save-address" class="text-sm"
+                      >Save Address</label
+                    >
+                  </div>
                 </div>
                 <hr class="my-3" />
                 <div>
-                  <h2>Additional Info</h2>
-                  <label for="added-info">order Notes (Optional)</label>
+                  <h2 class="text-2xl font-semibold my-4">Additional Info</h2>
+                  <label for="added-info" class="text-sm block my-2"
+                    >Order Notes (Optional)</label
+                  >
                   <textarea
                     name="added-info"
                     id="added-info"
                     cols="30"
-                    rows="10"
+                    rows="4"
                     placeholder="Notes about your order, e.g. special notes for delivery"
+                    class="border border-gray-200 p-4 w-full rounded-md mt-2 text-lg"
                   ></textarea>
                 </div>
               </form>
             </div>
-            <div class="w-2/6">
-              <h2>Order Summary</h2>
+            <div
+              class="w-2/5 ml-10 border p-4 border-gray-200 rounded-lg h-2/5"
+            >
+              <h2 class="text-xl font-semibold my-2">Order Summary</h2>
               <div id="tracking">
-                <div class="flex">
-                  <img src="" alt="" class="" id="image" />
-                  <span class="" id="food"></span>
-                  <span class="" id="quantity"></span>
-                  <span class="" id="food"></span>
+                <div class="flex w-full mb-5">
+                  <img
+                    src=""
+                    alt=""
+                    class="w-24 object-cover h-20 mr-4"
+                    id="image"
+                  />
+                  <span class="my-5 mr-4 text-sm" id="name"></span>
+                  <span class="my-5 mr-4 text-sm" id="quantity"></span>
+                  <span
+                    class="my-5 text-sm font-semibold"
+                    id="gross-total"
+                  ></span>
                 </div>
-                <p class="" id="subtotal"></p>
-                <p class="" id="delivery"></p>
-                <p class="" id="total"></p>
+                <p class="mb-3">
+                  Subtotal:
+                  <span class="float-right" id="subtotal"></span>
+                </p>
+                <hr class="my-3" />
+                <p class="my-3">
+                  Delivery <span class="float-right" id="delivery"></span>
+                </p>
+                <hr />
+                <p class="my-3">
+                  Total:<span id="total" class="float-right font-bold"></span>
+                </p>
               </div>
               <div>
-                <h2>Payment Method</h2>
-                <input type="radio" name="payment" id="payment" />
-                <label for="payment">Cash on Delivery</label>
-                <input type="radio" name="payment" id="payment" />
-                <label for="payment">Card</label>
-                <input type="radio" name="payment" id="payment" />
-                <label for="payment">Paypal</label>
+                <h2 class="text-xl font-semibold my-4">Payment Method</h2>
+                <div class="my-1">
+                  <input
+                    type="radio"
+                    name="payment"
+                    id="payment"
+                    checked
+                    class="checker appearance-none w-3 h-3 focus:outline-none rounded-full border border-gray-400"
+                  />
+                  <label for="payment" class="text-sm">Cash on Delivery</label>
+                </div>
+                <div class="my-1">
+                  <input
+                    type="radio"
+                    name="payment"
+                    id="payment"
+                    class="checker appearance-none w-3 h-3 focus:outline-none rounded-full border border-gray-400"
+                  />
+                  <label for="payment" class="text-sm">Card</label>
+                </div>
+                <div class="my-1">
+                  <input
+                    type="radio"
+                    name="payment"
+                    id="payment"
+                    class="checker appearance-none w-3 h-3 focus:outline-none rounded-full border border-gray-400"
+                  />
+                  <label for="payment" class="text-sm">Paypal</label>
+                </div>
               </div>
               <button
                 type="button"
-                class="px-12 py-2 rounded-3xl mb-2 w-full"
+                class="px-12 py-2 rounded-3xl my-3 w-full"
                 style="background-color: #00b207"
               >
                 <a href="/" class="text-white font-semibold">Place Order</a>
