@@ -257,7 +257,7 @@
                     name="added-info"
                     id="added-info"
                     cols="30"
-                    rows="4"
+                    rows="3"
                     placeholder="Notes about your order, e.g. special notes for delivery"
                     class="border border-gray-200 p-4 w-full rounded-md mt-2 text-lg"
                   ></textarea>
@@ -268,35 +268,43 @@
               class="w-2/5 ml-10 border p-4 border-gray-200 rounded-lg h-2/5"
             >
               <h2 class="text-xl font-semibold my-2">Order Summary</h2>
-              <div id="tracking">
-                <div class="flex w-full mb-5">
-                  <img
-                    src=""
-                    alt=""
-                    class="w-24 object-cover h-20 mr-4"
-                    id="image"
-                  />
-                  <span class="my-5 mr-4 text-sm" id="name"></span>
-                  <span class="my-5 mr-4 text-sm" id="quantity"></span>
-                  <span
-                    class="my-5 text-sm font-semibold"
-                    id="gross-total"
-                  ></span>
+              <div id="track-order">
+                <div id="ordered-dish">
+                  <div class="flex w-full mb-5">
+                    <img
+                      src=""
+                      alt=""
+                      class="image w-24 object-cover h-20 mr-4"
+                      id="image"
+                    />
+                    <span class="name my-5 mr-4 text-sm" id="name"></span>
+                    <span
+                      class="quantity my-5 mr-4 text-sm"
+                      id="quantity"
+                    ></span>
+                    <span
+                      class="gross-total my-5 text-sm font-semibold"
+                      id="gross-total"
+                    ></span>
+                  </div>
+                  <p class="mb-3">
+                    Subtotal:
+                    <span class="subtotal float-right" id="subtotal"></span>
+                  </p>
+                  <hr class="my-3" />
+                  <p class="my-3">
+                    Delivery
+                    <span class="delivery float-right" id="delivery"></span>
+                  </p>
+                  <hr />
+                  <p class="my-3">
+                    Total:<span
+                      id="total"
+                      class="total float-right font-bold"
+                    ></span>
+                  </p>
                 </div>
-                <p class="mb-3">
-                  Subtotal:
-                  <span class="float-right" id="subtotal"></span>
-                </p>
-                <hr class="my-3" />
-                <p class="my-3">
-                  Delivery <span class="float-right" id="delivery"></span>
-                </p>
-                <hr />
-                <p class="my-3">
-                  Total:<span id="total" class="float-right font-bold"></span>
-                </p>
-              </div>
-              <div>
+                <div></div>
                 <h2 class="text-xl font-semibold my-4">Payment Method</h2>
                 <div class="my-1">
                   <input
@@ -512,6 +520,6 @@
       </footer>
     </div>
     <script src="/src/Js/main.js"></script>
-    <script src="/src/Js/billing.js"></script>
+    <script src="/src/Js/shopping-cart.js"></script>
   </body>
 </html>

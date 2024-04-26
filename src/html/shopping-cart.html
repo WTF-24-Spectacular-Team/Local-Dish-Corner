@@ -26,12 +26,6 @@
       rel="stylesheet"
     />
     <title>Local Dish Corner Shopping Cart</title>
-    <style>
-      .place::placeholder {
-        color: #000000;
-        font-size: small;
-      }
-    </style>
   </head>
   <body>
     <div class="container box-border">
@@ -242,11 +236,12 @@
               </div>
               <button
                 type="button"
+                id="cart-btn"
                 class="px-12 py-2 rounded-3xl mb-2 w-full"
                 style="background-color: #00b207"
               >
                 <a
-                  href="/payment?${selectedFood}"
+                  href="/src/html/billing.html"
                   class="text-white font-semibold"
                   >Proceed to checkout</a
                 >
@@ -429,6 +424,6 @@
       </footer>
     </div>
     <script src="/src/Js/main.js"></script>
-    <script src="/src/Js/data.js"></script>
+    <script src="/src/Js/shopping-cart.js"></script>
   </body>
 </html>
