@@ -25,7 +25,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
-    <title>Local Dish Corner Shopping Cart</title>
+    <title>Local Dish Corner Billing</title>
+    <style>
+      .place::placeholder {
+        color: #000000;
+        font-size: small;
+      }
+      .checker:checked {
+        background-color: #00b207;
+      }
+    </style>
   </head>
   <body>
     <div class="container box-border">
@@ -35,7 +44,7 @@
           <!-- Logo -->
           <div class="w-1/5">
             <img
-              src="./src/assets/logo-no-bg1.png"
+              src="/src/assets/logo-no-bg1.png"
               alt="Logo"
               class="w-3/4 object-cover ml-4 mr-0"
             />
@@ -43,14 +52,16 @@
 
           <!-- Navigation Links -->
           <div class="flex items-center justify-center ml-0 w-4/5">
-            <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
+            <a href="/index.html" class="text-deep-grey ml-2 p-1 rounded mr-5"
+              >Home</a
+            >
             <a
-              href="./explore.html"
+              href="/src/html/explore.html"
               class="text-deep-grey ml-2 p-1 rounded mr-5"
               >Explore Local Cuisine</a
             >
             <a
-              href="./vendors.html"
+              href="/src/html/vendors.html"
               class="text-deep-grey p-1 rounded ml-2 mr-5"
               >Vendor</a
             >
@@ -116,13 +127,13 @@
                 type="submit"
                 class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
               >
-                <a href="./signup.html">Sign Up</a>
+                <a href="/src/html/signup.html">Sign Up</a>
               </button>
               <button
                 class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
                 type="submit"
               >
-                <a href="./login.html">Login</a>
+                <a href="/src/html/login.html">Login</a>
               </button>
             </div>
           </div>
@@ -138,119 +149,206 @@
             alt="Rice and Chicken Image"
           />
         </section>
-        <!-- MY SHOPPING CART SECTION -->
-        <section class="w-full px-16">
-          <h1 class="text-2xl font-bold text-center mt-12 tracking-wide mb-8">
-            My Shopping Cart
-          </h1>
-          <div class="w-full flex place-content-between h-40">
-            <div class="w-4/5">
-              <div class="border border-neutral-700 w-full rounded-lg">
-                <div
-                  class="w-auto flex place-content-between border-b border-neutral-700 h-8 rounded-lg"
-                  style="color: #878282"
-                >
-                  <p class="w-40 mr-32 ml-2">PRODUCT</p>
-                  <p class="w-20 mr-16">PRICE</p>
-                  <p class="w-20 mr-16">QUANTITY</p>
-                  <p class="w-20 mr-20">SUBTOTAL</p>
-                </div>
-                <div
-                  id="tracking"
-                  class="flex border-b border-neutral-700 h-28"
-                >
-                  <img
-                    id="image"
-                    src=""
-                    alt=""
-                    class="w-20 object-cover h-20 my-4 ml-4"
-                  />
-
-                  <div class="float-right py-10">
-                    <span id="food" class="ml-6"></span>
-                    <span id="price" class="ml-6"></span>
-
-                    <div class="float-right flex">
-                      <div class="w-32 border rounded-2xl flex ml-10">
-                        <button id="add-less" type="button" class="mx-2">
-                          <i
-                            class="fas fa-minus rounded-full w-7 h-7 p-2"
-                            style="color: #000000; background-color: #e4e4e4"
-                          ></i>
-                        </button>
-                        <span id="quantity" class="mx-4 pt-1"></span>
-                        <button id="add-more" type="button" class="mx-2">
-                          <i
-                            class="fas fa-plus rounded-full w-7 h-7 p-2"
-                            style="color: #000000; background-color: #e4e4e4"
-                          ></i>
-                        </button>
-                      </div>
-                      <span id="subtotal" class="font-medium mr-4 ml-8"> </span>
-                      <button
-                        type="button"
-                        class="mx-3 border rounded-full w-7"
-                        id="clear"
+        <!-- BILLING SECTION -->
+        <section class="w-full px-16 mt-32">
+          <div class="flex w-full">
+            <div class="w-4/6">
+              <h2 class="font-semibold text-2xl my-6">Billing Information</h2>
+              <form action="/submit" method="post">
+                <div>
+                  <div class="flex">
+                    <div class="mr-6">
+                      <label for="fname" class="block text-ms my-2"
+                        >First name</label
                       >
-                        <i class="fas fa-times" style="color: #000000"></i>
-                      </button>
+                      <input
+                        type="text"
+                        name="fname"
+                        placeholder="Your first name"
+                        class="border border-gray-200 w-64 p-3 rounded-md"
+                      />
+                    </div>
+                    <div>
+                      <label for="fname" class="block text-ms my-2"
+                        >Last name</label
+                      >
+                      <input
+                        type="text"
+                        name="lname"
+                        placeholder="Your last name"
+                        class="border border-gray-200 w-64 p-3 rounded-md"
+                      />
                     </div>
                   </div>
+                  <div>
+                    <label for="address" class="block my-2"
+                      >Street Address</label
+                    >
+                    <input
+                      type="text"
+                      name="address"
+                      placeholder="Address"
+                      class="w-full border border-gray-200 p-3 rounded-md"
+                    />
+                  </div>
+                  <div class="flex my-1">
+                    <div class="my-2">
+                      <label for="country" class="block my-2">
+                        Country / Region
+                      </label>
+                      <select
+                        name="country"
+                        id="country"
+                        class="w-64 mr-6 border border-gray-200 p-3 text-gray-400 rounded-md"
+                      >
+                        <option>Select</option>
+                        <option>Nigeria</option>
+                        <option>Ghana</option>
+                        <option>Kenya</option>
+                      </select>
+                    </div>
+                    <div class="my-2">
+                      <label for="state" class="block my-2">State</label>
+                      <select
+                        name="state"
+                        id="state"
+                        class="text-gray-400 border border-gray-200 w-28 p-3 rounded-md"
+                      >
+                        <option>Select</option>
+                        <option>Lagos</option>
+                        <option>Abuja</option>
+                        <option>Calabar</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <div class="w-1/2 mr-6">
+                      <label for="email" class="block my-2">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email Address"
+                        class="border border-gray-200 w-full p-3 rounded-md"
+                      />
+                    </div>
+                    <div class="w-1/2">
+                      <label for="phone" class="block my-2">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="Phone number"
+                        class="border border-gray-200 w-full p-3 rounded-md"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex my-4">
+                    <input
+                      type="checkbox"
+                      name="save-address"
+                      id="save-address"
+                      class="checker mr-1 cursor-pointer"
+                    />
+                    <label for="save-address" class="text-sm"
+                      >Save Address</label
+                    >
+                  </div>
                 </div>
-                <div class="h-20">
-                  <a
-                    href="/"
-                    class="float-right m-4 w-40 text-center p-2 rounded-3xl font-semibold"
-                    style="background-color: #ffae0026; color: #fc8a06"
-                    >Return to shop</a
+                <hr class="my-3" />
+                <div>
+                  <h2 class="text-2xl font-semibold my-4">Additional Info</h2>
+                  <label for="added-info" class="text-sm block my-2"
+                    >Order Notes (Optional)</label
                   >
+                  <textarea
+                    name="added-info"
+                    id="added-info"
+                    cols="30"
+                    rows="3"
+                    placeholder="Notes about your order, e.g. special notes for delivery"
+                    class="border border-gray-200 p-4 w-full rounded-md mt-2 text-lg"
+                  ></textarea>
                 </div>
-              </div>
-              <div
-                class="flex border border-neutral-700 mt-2 w-full py-4 rounded-xl px-2"
-              >
-                <p class="font-medium mr-3 pt-2">Coupon Code</p>
-                <input
-                  type="text"
-                  placeholder="Enter code"
-                  class="border rounded-3xl p-3 w-2/3 -mr-12"
-                />
-                <button
-                  type="submit"
-                  class="text-white bg-black w-44 rounded-3xl"
-                >
-                  Apply Coupon
-                </button>
-              </div>
+              </form>
             </div>
             <div
-              class="w-2/5 h-56 border border-neutral-700 rounded-2xl px-8 mx-8"
+              class="w-2/5 ml-10 border p-4 border-gray-200 rounded-lg h-2/5"
             >
-              <h3 class="font-semibold p-3">Cart Total</h3>
-              <div class="flex border-b border-neutral-700">
-                <p class="pb-2">
-                  Subtotal: <span class="ml-24" id="bills"></span>
-                </p>
-              </div>
-              <div class="border-b flex py-3">
-                <p>Delivery:</p>
-                <span class="ml-28" id="delivery"></span>
-              </div>
-              <div class="flex py-3">
-                <p>Total:</p>
-                <span class="ml-32" id="total"></span>
+              <h2 class="text-xl font-semibold my-2">Order Summary</h2>
+              <div id="track-order">
+                <div id="ordered-dish">
+                  <div class="flex w-full mb-5">
+                    <img
+                      src=""
+                      alt=""
+                      class="image w-24 object-cover h-20 mr-4"
+                      id="image"
+                    />
+                    <span class="name my-5 mr-4 text-sm" id="name"></span>
+                    <span
+                      class="quantity my-5 mr-4 text-sm"
+                      id="quantity"
+                    ></span>
+                    <span
+                      class="gross-total my-5 text-sm font-semibold"
+                      id="gross-total"
+                    ></span>
+                  </div>
+                  <p class="mb-3">
+                    Subtotal:
+                    <span class="subtotal float-right" id="subtotal"></span>
+                  </p>
+                  <hr class="my-3" />
+                  <p class="my-3">
+                    Delivery
+                    <span class="delivery float-right" id="delivery"></span>
+                  </p>
+                  <hr />
+                  <p class="my-3">
+                    Total:<span
+                      id="total"
+                      class="total float-right font-bold"
+                    ></span>
+                  </p>
+                </div>
+                <div></div>
+                <h2 class="text-xl font-semibold my-4">Payment Method</h2>
+                <div class="my-1">
+                  <input
+                    type="radio"
+                    name="payment"
+                    id="payment"
+                    checked
+                    class="checker appearance-none w-3 h-3 focus:outline-none rounded-full border border-gray-400"
+                  />
+                  <label for="payment" class="text-sm">Cash on Delivery</label>
+                </div>
+                <div class="my-1">
+                  <input
+                    type="radio"
+                    name="payment"
+                    id="payment"
+                    class="checker appearance-none w-3 h-3 focus:outline-none rounded-full border border-gray-400"
+                  />
+                  <label for="payment" class="text-sm">Card</label>
+                </div>
+                <div class="my-1">
+                  <input
+                    type="radio"
+                    name="payment"
+                    id="payment"
+                    class="checker appearance-none w-3 h-3 focus:outline-none rounded-full border border-gray-400"
+                  />
+                  <label for="payment" class="text-sm">Paypal</label>
+                </div>
               </div>
               <button
                 type="button"
-                id="cart-btn"
-                class="px-12 py-2 rounded-3xl mb-2 w-full"
+                class="px-12 py-2 rounded-3xl my-3 w-full"
                 style="background-color: #00b207"
               >
-                <a
-                  href="/src/html/billing.html"
-                  class="text-white font-semibold"
-                  >Proceed to checkout</a
-                >
+                <a href="/" class="text-white font-semibold">Place Order</a>
               </button>
             </div>
           </div>

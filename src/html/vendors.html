@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./src/assets/favicon_io/favicon.ico"
+      href="/src/assets/favicon_io/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="/output.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -25,42 +25,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
-    <title>Local Dish Corner</title>
-    <style>
-      .custom-css {
-        background-color: #f88100;
-        transition: all;
-        transition-duration: 1ms;
-        transition-timing-function: ease-in-out;
-      }
-      .custom-css:hover {
-        width: 13.5rem;
-      }
-      .custom-css:focus {
-        width: 13.5rem;
-      }
-      .out {
-        width: 100%;
-        height: 64rem;
-        overflow: hidden;
-        background-color: #f88100;
-        position: relative;
-      }
-
-      .in {
-        width: 180%;
-        height: 50rem;
-        border-radius: 100%;
-        background-color: #feefcf;
-        position: absolute;
-        left: -45%;
-        top: -150px;
-      }
-      .place::placeholder {
-        color: #000000;
-        font-size: small;
-      }
-    </style>
+    <title>Local Dish Corner Vendors</title>
   </head>
   <body>
     <div class="container box-border">
@@ -70,7 +35,7 @@
           <!-- Logo -->
           <div class="w-1/5">
             <img
-              src="./src/assets/logo-no-bg1.png"
+              src="/src/assets/logo-no-bg1.png"
               alt="Logo"
               class="w-3/4 object-cover ml-4 mr-0"
             />
@@ -78,8 +43,12 @@
 
           <!-- Navigation Links -->
           <div class="flex items-center justify-center ml-0 w-4/5">
-            <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
-            <a href="./explore.html" class="text-deep-grey ml-2 p-1 rounded mr-5"
+            <a href="/index.html" class="text-deep-grey ml-2 p-1 rounded mr-5"
+              >Home</a
+            >
+            <a
+              href="./explore.html"
+              class="text-deep-grey ml-2 p-1 rounded mr-5"
               >Explore Local Cuisine</a
             >
             <a href="#" class="text-deep-grey p-1 rounded ml-2 mr-5">Vendor</a>
@@ -145,13 +114,13 @@
                 type="submit"
                 class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
               >
-                Sign Up
+                <a href="./signup.html">Sign Up</a>
               </button>
               <button
                 class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
                 type="submit"
               >
-                Login
+                <a href="./login.html">Login</a>
               </button>
             </div>
           </div>
@@ -161,63 +130,9 @@
       <!-- THIS IS MAIN SPACE -->
       <main>
         <!-- HERO SECTION -->
-        <section class="mb-10 mt-16">
+        <section class="my-16">
           <div class="relative h-full">
-            <div
-              class="bg-cover bg-center bg-gray-300 h-screen w-full bg-blend-overlay"
-              style="background-image: url(src/assets/hero-img.jpg)"
-            >
-              <div
-                class="absolute text-center mt-3 mb-4 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
-              >
-                <h1
-                  class="text-5xl pb-12 tracking-wider font-bold text-center"
-                  style="color: #f88100"
-                >
-                  &nbsp;&nbsp;&nbsp; &nbsp;Savor the Flavor, Discover Local
-                  <br />Cuisine Gems Near You
-                </h1>
-                <p class="text-xl font-normal mt-4 tracking-wide">
-                  Bringing the Rich Tapestry of Local Cuisine Right to Your
-                  Fingertips - <br />Taste, Support, and Enjoy the Best of Your
-                  Community!
-                </p>
-                <button
-                  class="w-56 mx-40 text-base tracking-wide mt-10 rounded-md text-white px-6 py-3 hover:bg-red-500 cursor-pointer outline-none"
-                  style="background-color: #f88100"
-                >
-                  Explore Local Cuisine
-                </button>
-              </div>
-              <div class="absolute w-full flex bottom-0 bg-white h-12">
-                <span class="ml-28 flex mr-16 mt-4"
-                  ><i
-                    class="fab fa-whatsapp text-4xl mr-2"
-                    style="color: #f88000a0"
-                  ></i
-                  ><span class="ml-3 text-sm mt-2">
-                    Order made as easy as chatting with a friend</span
-                  ></span
-                >
-                <span class="mx-12 flex mt-4"
-                  ><img
-                    src="src/assets/img-247-no-bg.png"
-                    alt="24 7 icon"
-                    width="33"
-                    class="object-cover"
-                  />
-                  <span class="ml-3 text-sm mt-2"
-                    >We offer round the clock customer service</span
-                  ></span
-                >
-                <span class="mr-20 ml-10 flex mt-4"
-                  ><img src="src/assets/discount-icon.png" alt="" /><span
-                    class="ml-3 text-sm mt-2"
-                    >Enjoy discount on all first order</span
-                  ></span
-                >
-              </div>
-            </div>
+            <div class="h-2 w-full" style="background-color: #fea500"></div>
           </div>
         </section>
         <!-- POPULAR DISH SECTION -->
@@ -845,7 +760,7 @@
             <div class="in flex p-80">
               <div class="w-1/2">
                 <img
-                  src="src/assets/mobile-app.png"
+                  src="/src/assets/mobile-app.png"
                   alt="mobile App"
                   class="w-full ml-96 mr-24 pt-24"
                 />
@@ -1093,6 +1008,6 @@
         </section>
       </footer>
     </div>
-    <script src="main.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
