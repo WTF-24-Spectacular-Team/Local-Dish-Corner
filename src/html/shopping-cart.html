@@ -30,12 +30,12 @@
   <body>
     <div class="container box-border">
       <!-- HEADER SPACE -->
-      <header class="flex z-50 w-full fixed h-24 top-0 bg-white">
+      <header class="flex z-50 w-full fixed h-24 top-0 mb-1 bg-white">
         <nav class="px-3 items-center flex bg-white justify-between w-full">
           <!-- Logo -->
           <div class="w-1/5">
             <img
-              src="/src/assets/logo-no-bg1.png"
+              src="./src/assets/logo-no-bg1.png"
               alt="Logo"
               class="w-3/4 object-cover ml-4 mr-0"
             />
@@ -44,10 +44,16 @@
           <!-- Navigation Links -->
           <div class="flex items-center justify-center ml-0 w-4/5">
             <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
-            <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5"
+            <a
+              href="./explore.html"
+              class="text-deep-grey ml-2 p-1 rounded mr-5"
               >Explore Local Cuisine</a
             >
-            <a href="#" class="text-deep-grey p-1 rounded ml-2 mr-5">Vendor</a>
+            <a
+              href="./vendors.html"
+              class="text-deep-grey p-1 rounded ml-2 mr-5"
+              >Vendor</a
+            >
 
             <!-- More Dropdown -->
             <div class="relative mr-5 ml-2 p-1 inline-block text-left">
@@ -62,7 +68,7 @@
               </div>
               <div
                 id="dropdownList"
-                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
+                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-pri-orange border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
               >
                 <!-- <a
                   href="#"
@@ -110,13 +116,13 @@
                 type="submit"
                 class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
               >
-                Sign Up
+                <a href="./signup.html">Sign Up</a>
               </button>
               <button
                 class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
                 type="submit"
               >
-                Login
+                <a href="./login.html">Login</a>
               </button>
             </div>
           </div>

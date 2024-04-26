@@ -23,63 +23,106 @@
 </head>
 
 <body>
-    <div>
+    <div >
         <!-- HEADER SPACE -->
-        <header class="flex fixed top-0 left-0 right-0 bg-white  z-50">
-            <nav class="bg-off-white p-2 items-center flex justify-between w-full">
-                <!-- Logo -->
-                <div class="w-1/5">
-                    <img src="/src/assets/logo-no-bg1.png" alt="Logo" class="w-3/4 object-cover ml-4 mr-0" />
-                </div>
+    <header class="flex z-50 w-full fixed h-24 top-0 mb-1 bg-white">
+        <nav class="px-3 items-center flex bg-white justify-between w-full">
+          <!-- Logo -->
+          <div class="w-1/5">
+            <img
+              src="/src/assets/logo-no-bg1.png"
+              alt="Logo"
+              class="w-3/4 object-cover ml-4 mr-0"
+            />
+          </div>
 
-                <!-- Navigation Links -->
-                <div class="flex items-center justify-center ml-0 w-4/5">
-                    <a href="./Index.html" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
-                    <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Explore Local Cuisine</a>
-                    <a href="#" class="text-deep-grey p-1 rounded ml-2 mr-5">Vendor</a>
+          <!-- Navigation Links -->
+          <div class="flex items-center justify-center ml-0 w-4/5">
+            <a href="/index.html" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
+            <a
+              href="#"
+              class="text-deep-grey ml-2 p-1 rounded mr-5"
+              >Explore Local Cuisine</a
+            >
+            <a
+              href="./vendors.html"
+              class="text-deep-grey p-1 rounded ml-2 mr-5"
+              >Vendor</a
+            >
 
-                    <!-- More Dropdown -->
-                    <div class="relative mr-5 ml-2 p-1 inline-block text-left">
-                        <div>
-                            <a href="#" id="moreButton" class="text-deep-grey mr-5 rounded p-1 focus:outline-none">
-                                More <i class="fas fa-angle-down"></i>
-                            </a>
-                        </div>
-                        <div id="dropdownList"
-                            class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-orange-600 border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
+            <!-- More Dropdown -->
+            <div class="relative mr-5 ml-2 p-1 inline-block text-left">
+              <div>
+                <a
+                  href="#"
+                  id="moreButton"
+                  class="text-deep-grey mr-5 rounded p-1 focus:outline-none"
+                >
+                  More <i class="fas fa-angle-down"></i>
+                </a>
+              </div>
+              <div
+                id="dropdownList"
+                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-pri-orange border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
+              >
+                <!-- <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Item 1</a
+                > -->
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Event Planner Corner</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Culinary ScholarShip Opportunity</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >About Us</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
 
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Event Planner
-                                Corner</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Culinary
-                                ScholarShip Opportunity</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About Us</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
-                        </div>
-                    </div>
+            <!-- Search -->
+            <div class="relative mr-5">
+              <input
+                type="text"
+                class="border-none focus:outline-none px-3 py-1 rounded-md pl-10 bg-gray-200 text-base"
+                placeholder="Search local cuisine"
+              />
+              <div class="absolute top-0 left-0 flex items-center h-full px-3">
+                <i class="fas fa-search text-gray-400"></i>
+              </div>
+            </div>
 
-                    <!-- Search -->
-                    <div class="relative mr-5">
-                        <input type="text" class="border border-gray-400 focus:outline-none px-3 py-1 rounded-md pl-10"
-                            placeholder="Search..." />
-                        <div class="absolute top-0 left-0 flex items-center h-full px-3">
-                            <i class="fas fa-search text-gray-500"></i>
-                        </div>
-                    </div>
-
-                    <!-- Sign Up and Login Buttons -->
-                    <div class="ml-2">
-                        <button type="submit" class="bg-green-600 hover:bg-orange-600 text-white px-4 py-2 rounded-md">
-                            Sign Up
-                        </button>
-                        <button
-                            class="hover:bg-orange-600 border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
-                            type="submit">
-                            Login
-                        </button>
-                    </div>
-                </div>
-            </nav>
-        </header>
+            <!-- Sign Up and Login Buttons -->
+            <div class="ml-2">
+              <button
+                type="submit"
+                class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
+              >
+                <a href="./signup.html">Sign Up</a>
+              </button>
+              <button
+                class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
+                type="submit"
+              >
+                <a href="./login.html">Login</a>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
 
         <!-- THIS IS MAIN SPACE -->
         <main class="mt-32 z-10" style="background-color: #ECECEC;">
@@ -903,6 +946,7 @@
     </div>
     </section>
 
+    <script src="/src/Js/main.js"></script>
     <script src="/src/Js/explore.js"></script>
 </body>
 
