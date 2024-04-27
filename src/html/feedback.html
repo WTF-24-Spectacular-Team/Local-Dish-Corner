@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/src/assets/favicon_io/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/src/assets/favicon_io/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./output.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <title>Local Dish Corner (Nutrition feedback & Order)</title>
     <style>
-      .place::placeholder {
-        color: #000000;
-        font-size: small;
-      }
+        .place::placeholder {
+            color: #000000;
+            font-size: small;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container box-border">
         <!-- HEADER SPACE -->
         <header class="flex z-50 w-full fixed h-24 top-0 bg-white">
@@ -44,98 +29,63 @@
                     <img src="/src/assets/logo-no-bg1.png" alt="Logo" class="w-3/4 object-cover ml-4 mr-0" />
                 </div>
 
-          <!-- Navigation Links -->
-          <div class="flex items-center justify-center ml-0 w-4/5">
-            <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
-            <a
-              href="./explore.html"
-              class="text-deep-grey ml-2 p-1 rounded mr-5"
-              >Explore Local Cuisine</a
-            >
-            <a
-              href="./vendors.html"
-              class="text-deep-grey p-1 rounded ml-2 mr-5"
-              >Vendor</a
-            >
+                <!-- Navigation Links -->
+                <div class="flex items-center justify-center ml-0 w-4/5">
+                    <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
+                    <a href="./explore.html" class="text-deep-grey ml-2 p-1 rounded mr-5">Explore Local Cuisine</a>
+                    <a href="./vendors.html" class="text-deep-grey p-1 rounded ml-2 mr-5">Vendor</a>
 
-            <!-- More Dropdown -->
-            <div class="relative mr-5 ml-2 p-1 inline-block text-left">
-              <div>
-                <a
-                  href="#"
-                  id="moreButton"
-                  class="text-deep-grey mr-5 rounded p-1 focus:outline-none"
-                >
-                  More <i class="fas fa-angle-down"></i>
-                </a>
-              </div>
-              <div
-                id="dropdownList"
-                class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-pri-orange border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
-              >
-                <!-- <a
+                    <!-- More Dropdown -->
+                    <div class="relative mr-5 ml-2 p-1 inline-block text-left">
+                        <div>
+                            <a href="#" id="moreButton" class="text-deep-grey mr-5 rounded p-1 focus:outline-none">
+                                More <i class="fas fa-angle-down"></i>
+                            </a>
+                        </div>
+                        <div id="dropdownList"
+                            class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-pri-orange border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
+                            <!-- <a
                   href="#"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >Item 1</a
                 > -->
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >Event Planner Corner</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >Culinary ScholarShip Opportunity</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >About Us</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >Contact Us</a
-                >
-              </div>
-            </div>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Event Planner
+                                Corner</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Culinary
+                                ScholarShip Opportunity</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+                        </div>
+                    </div>
 
-            <!-- Search -->
-            <div class="relative mr-5">
-              <input
-                type="text"
-                class="border-none focus:outline-none px-3 py-1 rounded-md pl-10 bg-gray-200 text-base"
-                placeholder="Search local cuisine"
-              />
-              <div class="absolute top-0 left-0 flex items-center h-full px-3">
-                <i class="fas fa-search text-gray-400"></i>
-              </div>
-            </div>
+                    <!-- Search -->
+                    <div class="relative mr-5">
+                        <input type="text"
+                            class="border-none focus:outline-none px-3 py-1 rounded-md pl-10 bg-gray-200 text-base"
+                            placeholder="Search local cuisine" />
+                        <div class="absolute top-0 left-0 flex items-center h-full px-3">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
 
-            <!-- Sign Up and Login Buttons -->
-            <div class="ml-2">
-              <button
-                type="submit"
-                class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
-              >
-                <a href="./signup.html">Sign Up</a>
-              </button>
-              <button
-                class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
-                type="submit"
-              >
-                <a href="./login.html">Login</a>
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
+                    <!-- Sign Up and Login Buttons -->
+                    <div class="ml-2">
+                        <button type="submit" class="bg-green-600 text-white px-4 py-2 border rounded-md">
+                            <a href="./signup.html">Sign Up</a>
+                        </button>
+                        <button class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
+                            type="submit">
+                            <a href="./login.html">Login</a>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-      <!-- THIS IS MAIN SPACE -->
+        <!-- THIS IS MAIN SPACE -->
 
-            <!-- HERO SECTION -->
-            <!-- <section class="h-14 w-full mt-24">
+        <!-- HERO SECTION -->
+        <!-- <section class="h-14 w-full mt-24">
                 <img src="/src/assets/Hero-shopping.png" alt="Rice and Chicken Image" />
             </section>
           
@@ -143,20 +93,65 @@
                                 
         
         </main> -->
-          <main class="mt-32">
+        <main class="mt-32">
 
             <div class=" bg-cover bg-no-repeat h-14">
-            <img class="w-full !important" src="/src/assets/Hero-shopping.png" alt="Your Image">
+                <img class="w-full !important" src="/src/assets/Hero-shopping.png" alt="Your Image">
             </div>
-            </main>
+
+            <!--Cart section-->
+            <div style="max-width: 100%; margin-left: 200px; margin-top: 100px; ">
+
+                <div style="display: grid; grid-template-columns: 40% 60%;">
+                    <div>
+                        <img src="/src/assets/Product Image.png">
+                    </div>
+
+
+
+
+
+                    <div>
+                        <h1 class=" font-bold" style="font-size: 30px; margin-left: 100px">Jollof Rice and Chicken
+                            &nbsp;<small class="px-2 font-normal"
+                                style="font-size: 14px; background-color: #f3deb5; color: #FC8A06;"> In
+                                Stock</small></h1>
+
+                        <div class="flex flex-row gap-2" style="margin-left: 100px;">
+                            <img src="/src/assets/Icon.png">
+                            <p class="font-semibold"> Ikeja,Lagos</p>
+                            <img src="/src/assets/Star.png">
+                            <img src="/src/assets/Star.png">
+                            <img src="/src/assets/Star.png">
+                            <img src="/src/assets/Star.png">
+                            <img src="/src/assets/Star.png">
+                            <small style="color: #666666;">4 Reviews</small>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </main>
         <!-- THE FOOTER GOES IN HERE -->
         <footer>
 
             <!-- INSTALL APP SECTION -->
             <!-- <section  style="background-color: #f88100">
                 <div class=""> -->
-                    <!-- SUBSCRIPTION Goes Here -->
-                    <!-- <section class="w-full flex place-content-between z-40 px-20">
+            <!-- SUBSCRIPTION Goes Here -->
+            <!-- <section class="w-full flex place-content-between z-40 px-20">
                         <div class="text-white text-center mt-20">
                             <div class="flex">
                                 <img src="/src/assets/newsletter.png" alt="Icon" class="inline mr-3 ml-0 h-16" />
@@ -179,8 +174,8 @@
                     </section>
                 </div>
             </section> -->
-        <!-- Footer Links Here -->
-        <!-- <section class="flex p-10 mt-0 w-full" style="background-color: #e4e4e4">
+            <!-- Footer Links Here -->
+            <!-- <section class="flex p-10 mt-0 w-full" style="background-color: #e4e4e4">
                 <div class="w-1/5 ml-2">
                     <div class="w-full pt-2">
                         <img src="/src/assets/logo-no-bg1.png" alt="Brand" class="object-cover w-3/4 m-auto" />
@@ -245,8 +240,8 @@
                     </div>
                 </div>
             </section> -->
-        <!-- Cookies Goes Here -->
-        <!-- <section class="w-full">
+            <!-- Cookies Goes Here -->
+            <!-- <section class="w-full">
                 <div class="flex text-white h-28 px-10" style="background-color: #8f9698">
                     <div class="w-full pr-6">
                         <div class="ml-12 h-10 flex mt-4 mb-2">
@@ -271,8 +266,8 @@
                         </button>
                     </div>
                 </div> -->
-                <!-- PRIVACY POLICY HERE -->
-                <!-- <section class="bg-green-700 h-16">
+            <!-- PRIVACY POLICY HERE -->
+            <!-- <section class="bg-green-700 h-16">
                     <div class="text-right text-xs flex p-6 float-right text-gray-200 font-bold">
                         <span class="mr-10">Privacy Policy</span>
                         <span class="mr-10">Terms</span>
@@ -283,8 +278,7 @@
             </section>
         </footer>
     </div> -->
-   
+
 </body>
 
 </html>
-
