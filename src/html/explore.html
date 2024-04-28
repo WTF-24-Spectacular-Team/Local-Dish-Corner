@@ -23,8 +23,10 @@
 </head>
 
 <body>
-    <div >
+
+    <div>
         <!-- HEADER SPACE -->
+
     <header class="flex z-50 w-full fixed h-24 top-0 mb-1 bg-white">
         <nav class="px-3 items-center flex bg-white justify-between w-full">
           <!-- Logo -->
@@ -89,36 +91,54 @@
               </div>
             </div>
 
-            <!-- Search -->
-            <div class="relative mr-5">
-              <input
-                type="text"
-                class="border-none focus:outline-none px-3 py-1 rounded-md pl-10 bg-gray-200 text-base"
-                placeholder="Search local cuisine"
-              />
-              <div class="absolute top-0 left-0 flex items-center h-full px-3">
-                <i class="fas fa-search text-gray-400"></i>
-              </div>
-            </div>
+                <!-- Navigation Links -->
+                <div class="flex items-center justify-center ml-0 w-4/5">
+                    <a href="/index.html" class="text-deep-grey ml-2 p-1 rounded mr-5">Home</a>
+                    <a href="#" class="text-deep-grey ml-2 p-1 rounded mr-5">Explore Local Cuisine</a>
+                    <a href="./vendors.html" class="text-deep-grey p-1 rounded ml-2 mr-5">Vendor</a>
 
-            <!-- Sign Up and Login Buttons -->
-            <div class="ml-2">
-              <button
-                type="submit"
-                class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
-              >
-                <a href="./signup.html">Sign Up</a>
-              </button>
-              <button
-                class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
-                type="submit"
-              >
-                <a href="./login.html">Login</a>
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
+                    <!-- More Dropdown -->
+                    <div class="relative mr-5 ml-2 p-1 inline-block text-left">
+                        <div>
+                            <a href="#" id="moreButton" class="text-deep-grey mr-5 rounded p-1 focus:outline-none">
+                                More <i class="fas fa-angle-down"></i>
+                            </a>
+                        </div>
+                        <div id="dropdownList"
+                            class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-pri-orange border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
+
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Event Planner
+                                Corner</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Culinary
+                                ScholarShip Opportunity</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Search -->
+                    <div class="relative mr-5">
+                        <input type="text"
+                            class="border-none focus:outline-none px-3 py-1 rounded-md pl-10 bg-gray-200 text-base"
+                            placeholder="Search local cuisine" />
+                        <div class="absolute top-0 left-0 flex items-center h-full px-3">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sign Up and Login Buttons -->
+                    <div class="ml-2">
+                        <button type="submit" class="border-green-600 text-green-600 px-4 py-2 border rounded-md">
+                            <a href="./signup.html">Sign Up</a>
+                        </button>
+                        <button class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
+                            type="submit">
+                            <a href="./login.html">Login</a>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
         <!-- THIS IS MAIN SPACE -->
         <main class="mt-32 z-10" style="background-color: #ECECEC;">
@@ -690,7 +710,8 @@
             </div>
             <div class="flex flex-row mt-8 gap-4  min-w-full">
 
-                <div class="h-fit testimonial-item " style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
+                <div class="h-fit testimonial-item "
+                    style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
                     <div class="grid grid-cols-2 justify-between">
                         <div class="flex flex-row">
                             <div class=" m-2 pr-4" style="border-right: #FC8A06 2px solid;">
@@ -722,7 +743,8 @@
                         were delivered on time.</div>
                 </div>
 
-                <div class="h-fit testimonial-item " style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
+                <div class="h-fit testimonial-item "
+                    style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
                     <div class="grid grid-cols-2 justify-between">
                         <div class="flex flex-row">
                             <div class=" m-2 pr-4" style="border-right: #FC8A06 2px solid;">
@@ -753,7 +775,8 @@
                         I’m so glad i could
                         make my wife happy. Thank You LCD</div>
                 </div>
-                <div class="h-fit testimonial-item " style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
+                <div class="h-fit testimonial-item "
+                    style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
                     <div class="grid grid-cols-2 justify-between">
                         <div class="flex flex-row">
                             <div class=" m-2 pr-4" style="border-right: #FC8A06 2px solid;">
@@ -785,7 +808,8 @@
                         drinks served on the side was awesome and welcoming. It was an ideal accompaniment to my meal!"
                     </div>
                 </div>
-                <div class="h-fit testimonial-item " style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
+                <div class="h-fit testimonial-item "
+                    style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
                     <div class="grid grid-cols-2 justify-between">
                         <div class="flex flex-row">
                             <div class=" m-2 pr-4" style="border-right: #FC8A06 2px solid;">
@@ -816,7 +840,8 @@
                         selection. Localdishcorner boasts an impressive lineup of restaurants, cafes, and
                         eateries, ranging from local hidden gems to well-known favorites.</div>
                 </div>
-                <div class="h-fit testimonial-item " style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
+                <div class="h-fit testimonial-item "
+                    style="width: 800px; padding: 18px 20px; background-color: #ECECEC;">
                     <div class="grid grid-cols-2 justify-between">
                         <div class="flex flex-row">
                             <div class=" m-2 pr-4" style="border-right: #FC8A06 2px solid;">
@@ -937,9 +962,13 @@
                     <div>Do not sell or share my personal information</div>
                 </div>
             </div>
+        </section>
     </div>
-    </section>
+
 
     <script src="../../main.js"></script>
-    <script src="../js/explore.js"></script>
+    <script src="../Js/explore.js"></script>
+</body>
+
+
 </html>
