@@ -588,19 +588,21 @@ header {
 }
 a:focus {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 129 0 / var(--tw-bg-opacity));
+  background-color: #f88100 var(--tw-bg-opacity);
+  color: #ffffff;
 }
 a:active {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 129 0 / var(--tw-bg-opacity));
+  background-color: #f88100 var(--tw-bg-opacity);
+  color: #ffffff;
 }
-#image-container img{
+#image-container img {
   width: 200px;
   height: auto;
-   transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
-#image-container img:hover{
-    transform: scale(1.1);
+#image-container img:hover {
+  transform: scale(1.1);
 }
 
 /* Define custom components */
@@ -639,4 +641,32 @@ a:active {
 .place::placeholder {
   color: #000000;
   font-size: small;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #8f9698;
+  color: white;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+/* Close button style */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
