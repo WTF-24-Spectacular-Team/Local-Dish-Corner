@@ -28,10 +28,10 @@
     <title>Local Dish Corner Vendors</title>
   </head>
   <body>
-    <div class="container box-border">
+    <div class="container place-items-center lg:w-full">
       <!-- HEADER SPACE -->
       <header class="flex z-50 w-full fixed h-24 top-0 mb-1 bg-white">
-        <nav class="px-3 items-center flex bg-white justify-between w-full">
+        <nav class="items-center flex bg-white justify-between w-full">
           <!-- Logo -->
           <div class="w-1/5">
             <img
@@ -136,7 +136,7 @@
       <!-- THIS IS MAIN SPACE -->
       <main>
         <!-- HERO SECTION -->
-        <section class="mt-6">
+        <section class="mt-6 w-full">
           <div class="relative h-auto">
             <div class="w-full flex h-3/4" style="background-color: #fea500">
               <div class="float-left">
@@ -174,7 +174,8 @@
           >
             Top Vendors
           </h2>
-          <div class="grid grid-flow-row grid-rows-4 mt-6 mx-16 gap-1">
+
+          <div class="grid grid-flow-row grid-rows-4 mt-6 ml-20 gap-1">
             <div class="grid grid-flow-col grid-cols-3 my-6">
               <div class="w-4/5 rounded-lg" style="background-color: #ffae0026">
                 <div class="w-full object-cover">
@@ -434,75 +435,169 @@
           >
             Favourite Meals
           </h2>
-          <div class="w-full h-auto flex px-20 place-content-center">
-            <div><img src="../assets/forward.png" alt="" /></div>
-            <div class="w-1/3 mx-6">
-              <img src="" alt="" id="fav1" class="w-full h-60 object-cover" />
-              <p class="font-bold py-3 text-xl" id="title1"></p>
-              <p class="font-thin text-sm" style="color: #ffb30e">
-                <i class="fas fa-map-marker-alt" style="color: #ffb30e"
-                  >&nbsp; <span class="float-right" id="location1"></span
-                ></i>
-              </p>
-              <p class="text-sm font-bold p-2" id="price1"></p>
-              <div
-                class="w-full h-12 rounded-lg p-3"
-                style="background-color: #f17228"
-              >
-                <button
-                  type="button"
-                  onclick="window.location.href='/'"
-                  id="order1"
-                  class="text-white text-sm font-bold text-center px-28"
-                ></button>
+          <div class="flex">
+            <div class="">
+              <img src="../assets/leftarrow.png" alt="" />
+            </div>
+            <div class="w-full h-auto flex place-content-center">
+              <div class="w-1/3 mx-6">
+                <img src="" alt="" id="fav1" class="w-full h-60 object-cover" />
+                <p class="font-bold py-3 text-xl" id="title1"></p>
+                <p class="font-thin text-sm" style="color: #ffb30e">
+                  <i class="fas fa-map-marker-alt" style="color: #ffb30e"
+                    >&nbsp; <span class="float-right" id="location1"></span
+                  ></i>
+                </p>
+                <p class="text-sm font-bold p-2" id="price1"></p>
+                <div
+                  class="w-full h-12 rounded-lg p-3"
+                  style="background-color: #f17228"
+                >
+                  <button
+                    type="button"
+                    onclick="window.location.href='/'"
+                    id="order1"
+                    class="text-white text-sm font-bold text-center px-24"
+                  ></button>
+                </div>
+              </div>
+              <div class="w-1/3">
+                <img src="" alt="" id="fav2" class="w-full h-60" />
+                <p class="font-bold py-3 text-xl" id="title2"></p>
+                <p class="font-thin text-sm" style="color: #ffb30e">
+                  <i class="fas fa-map-marker-alt" style="color: #ffb30e"
+                    >&nbsp; <span class="float-right" id="location2"></span
+                  ></i>
+                </p>
+                <p class="text-sm font-bold my-2" id="price2"></p>
+                <div
+                  class="w-full h-12 rounded-lg text-white py-3"
+                  style="background-color: #f17228"
+                >
+                  <button
+                    type="button"
+                    onclick="window.location.href='/'"
+                    id="order2"
+                    class="text-center text-white text-sm font-bold px-28"
+                  ></button>
+                </div>
+              </div>
+              <div class="w-1/3 mx-8">
+                <img src="" alt="" id="fav3" class="w-full h-60" />
+                <p class="font-bold py-3 text-xl" id="title3"></p>
+                <p class="font-thin text-sm" style="color: #ffb30e">
+                  <i class="fas fa-map-marker-alt" style="color: #ffb30e"
+                    >&nbsp;
+                    <span class="float-right text-center" id="location3"></span
+                  ></i>
+                </p>
+                <p class="text-sm font-bold my-2" id="price3"></p>
+                <div
+                  class="w-full h-12 rounded-lg text-white"
+                  style="background-color: #f17228"
+                >
+                  <button
+                    type="button"
+                    onclick="window.location.href='/'"
+                    id="order3"
+                    class="text-center py-3 text-white text-sm font-bold px-28"
+                  ></button>
+                </div>
               </div>
             </div>
-            <div class="w-1/3">
-              <img src="" alt="" id="fav2" class="w-full h-60" />
-              <p class="font-bold py-3 text-xl" id="title2"></p>
-              <p class="font-thin text-sm" style="color: #ffb30e">
-                <i class="fas fa-map-marker-alt" style="color: #ffb30e"
-                  >&nbsp; <span class="float-right" id="location2"></span
-                ></i>
-              </p>
-              <p class="text-sm font-bold my-2" id="price2"></p>
-              <div
-                class="w-full h-12 rounded-lg text-white py-3"
-                style="background-color: #f17228"
-              >
-                <button
-                  type="button"
-                  onclick="window.location.href='/'"
-                  id="order2"
-                  class="text-center text-white text-sm font-bold px-28"
-                ></button>
-              </div>
-            </div>
-            <div class="w-1/3 mx-8">
-              <img src="" alt="" id="fav3" class="w-full h-60" />
-              <p class="font-bold py-3 text-xl" id="title3"></p>
-              <p class="font-thin text-sm" style="color: #ffb30e">
-                <i class="fas fa-map-marker-alt" style="color: #ffb30e"
-                  >&nbsp;
-                  <span class="float-right text-center" id="location3"></span
-                ></i>
-              </p>
-              <p class="text-sm font-bold my-2" id="price3"></p>
-              <div
-                class="w-full h-12 rounded-lg text-white"
-                style="background-color: #f17228"
-              >
-                <button
-                  type="button"
-                  onclick="window.location.href='/'"
-                  id="order3"
-                  class="text-center py-3 text-white text-sm font-bold px-28"
-                ></button>
-              </div>
+            <div class="">
+              <img
+                src="../assets/rightarrow.png"
+                class="place-items-center"
+                alt=""
+              />
             </div>
           </div>
-          <div class="flex place-content-center float-right -mt-52">
-            <img src="../assets/Back.png" alt="" class="pt-0" />
+        </section>
+
+        <!-- TOP MENUS SECTION-->
+        <section class="mt-10 w-full">
+          <h2
+            class="text-center font-bold text-2xl mb-6"
+            style="color: #f88100"
+          >
+            Top Menus
+          </h2>
+          <div class="flex justify-between">
+            <div class="w-1/6">
+              <img src="../assets/leftarrow.png" alt="" class="w-16 ml-10" />
+            </div>
+            <div class="flex w-5/6 justify-evenly">
+              <div>
+                <h2 class="font-bold text-lg">GOD GRACE SPOT</h2>
+                <div class="h-auto w-40" style="background-color: #fc8a0634">
+                  <div class="flex justify-between">
+                    <h2 class="font-black text-xl ml-3">MENU</h2>
+                    <img
+                      src="../assets/God's-grace-icon.png"
+                      alt=""
+                      class="float-right w-14"
+                    />
+                  </div>
+                  <ul class="list-none">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h2 class="font-bold text-lg">MALLAM MUSA SUYA</h2>
+                <div class="h-auto w-40" style="background-color: #fc8a0634">
+                  <div class="flex justify-between">
+                    <h2 class="font-black text-xl ml-3">MENU</h2>
+                    <img
+                      src="../assets/mMusa-logo.png"
+                      alt=""
+                      class="float-right w-14"
+                    />
+                  </div>
+                  <ul class="list-none">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h2 class="font-bold text-lg">LILI BUKA</h2>
+                <div class="h-auto w-40" style="background-color: #fc890634">
+                  <div class="flex justify-between">
+                    <h2 class="font-black text-xl ml-3">MENU</h2>
+                    <img
+                      src="../assets/lilian-icon.png"
+                      alt=""
+                      class="float-right w-14"
+                    />
+                  </div>
+                  <ul class="list-none">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="w-1/6">
+              <img src="../assets/rightarrow.png" class="w-16" alt="" />
+            </div>
           </div>
         </section>
       </main>
@@ -718,7 +813,7 @@
         </section>
         <!-- Cookies Goes Here -->
         <section class="w-full">
-          <div
+          <!-- <div
             class="flex text-white h-28 px-10"
             style="background-color: #8f9698"
           >
@@ -750,7 +845,7 @@
                 Accept All
               </button>
             </div>
-          </div>
+          </div> -->
           <!-- PRIVACY POLICY HERE -->
           <section class="bg-green-700 h-16">
             <div class="text-right text-xs flex p-6 float-right text-gray-200">

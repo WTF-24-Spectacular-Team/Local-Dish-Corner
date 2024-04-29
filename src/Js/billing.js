@@ -1,36 +1,25 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const queryString = window.location.search;
-//   const urlParam = new URLSearchParams(queryString);
-//   const serialized = urlParam.get("details");
+const displayCartContent = (details) => {
+  if (Array.isArray(details) && details.length > 0) {
+    const item = details[0];
 
-//   const trackOrder = JSON.parse(decodeURIComponent(serialized));
+    const subtotalValue = item.price * item.quantity;
+    const billValue = subtotalValue + item.delivery;
 
-//   const displayCartContent = () => {
-//     if (Array.isArray(trackOrder) && trackOrder.length > 0) {
-//       const item = trackOrder[0]; // Assuming you're only dealing with the first item
+    myImage.src = item.image;
+    food.innerText = item.type;
+    quantity.innerText = item.quantity;
+    gross.innerText = `${item.subtotalValue}`;
+    subTotal.innerText = `${item.subtotalValue}`;
+    delivery.innerText = `${item.delivery}`;
+    total.innerText = item.billValue;
+  }
+};
 
-//       const imageElement = document.getElementById("image");
-//       if (imageElement) imageElement.src = item.image;
+document.addEventListener("DOMContentLoaded", function () {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const serialized = urlParams.get("details");
 
-//       const nameElement = document.getElementById("name");
-//       if (nameElement) nameElement.innerText = item.type; // Assuming item.type holds the food name
-
-//       const quantityElement = document.getElementById("quantity");
-//       if (quantityElement) quantityElement.innerText = item.quantity;
-
-//       const grossTotalElement = document.getElementById("gross-total");
-//       if (grossTotalElement) grossTotalElement.innerText = item.subtotal;
-
-//       const subtotalElement = document.getElementById("subtotal");
-//       if (subtotalElement) subtotalElement.innerText = item.subtotal;
-
-//       const deliveryElement = document.getElementById("delivery");
-//       if (deliveryElement) deliveryElement.innerText = item.delivery;
-
-//       const totalElement = document.getElementById("total");
-//       if (totalElement) totalElement.innerText = item.total;
-//     }
-//   };
-
-//   displayCartContent();
-// });
+  const trackOrder = JSON.parse(decodeURIComponent(serialized));
+  displayCartContent(trackOrder);
+});

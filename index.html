@@ -28,10 +28,10 @@
     <title>Local Dish Corner</title>
   </head>
   <body>
-    <div class="container box-border">
+    <div class="container place-items-center lg:w-full">
       <!-- HEADER SPACE -->
       <header class="flex z-50 w-full fixed h-24 top-0 mb-1 bg-white">
-        <nav class="px-3 items-center flex bg-white justify-between w-full">
+        <nav class="items-center flex bg-white justify-between w-full">
           <!-- Logo -->
           <div class="w-1/5">
             <img
@@ -54,9 +54,12 @@
               class="text-deep-grey p-1 rounded ml-2 mr-5"
               >Vendor</a
             >
+            <a href="#" class="text-deep-grey p-1 rounded ml-2 mr-5"
+              >About Us</a
+            >
 
             <!-- More Dropdown -->
-            <div class="relative mr-5 ml-2 p-1 inline-block text-left">
+            <!-- <div class="relative mr-5 ml-2 p-1 inline-block text-left">
               <div>
                 <a
                   href="#"
@@ -69,13 +72,13 @@
               <div
                 id="dropdownList"
                 class="hidden absolute right-0 mt-2 w-56 origin-top-right bg-pri-orange border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg"
-              >
-                <!-- <a
+              > -->
+            <!-- <a
                   href="#"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >Item 1</a
                 > -->
-                <a
+            <!-- <a
                   href="#"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >Event Planner Corner</a
@@ -94,9 +97,9 @@
                   href="#"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >Contact Us</a
-                >
-              </div>
-            </div>
+                > -->
+            <!-- </div>
+            </div> -->
 
             <!-- Search -->
             <div class="relative mr-5">
@@ -113,16 +116,18 @@
             <!-- Sign Up and Login Buttons -->
             <div class="ml-2">
               <button
+                onclick="window.location.href='./src/html/signup.html'"
                 type="submit"
-                class="border-green-600 text-green-600 px-4 py-2 border rounded-md"
+                class="btn border-green-600 text-green-600 px-4 py-2 border rounded-md"
               >
-                <a href="./src/html/signup.html">Sign Up</a>
+                Sign Up
               </button>
               <button
-                class="border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
+                onclick="window.location.href='./src/html/login.html'"
+                class="btn border-solid border text-green-600 px-4 py-2 border-green-600 rounded-md ml-2"
                 type="submit"
               >
-                <a href="./src/html/login.html">Login</a>
+                Login
               </button>
             </div>
           </div>
@@ -192,7 +197,7 @@
           </div>
         </section>
         <!-- POPULAR DISH SECTION -->
-        <section class="pl-16 pr-24 mt-28 bg-slate-100 w-full h-screen px-11">
+        <section class="mt-28 bg-slate-100 w-full h-screen px-11">
           <div class="grid grid-flow-col grid-cols-3 cursor-pointer">
             <div class="relative m-10">
               <div class="w-3/5 absolute">
@@ -328,7 +333,7 @@
         </section>
         <!-- TOP VENDORS -->
         <section
-          class="mt-36 mb-8 pt-28 pr-24 pl-16 w-full h-auto"
+          class="mt-36 mb-8 pt-28 pl-10 w-full h-auto"
           style="background-color: #edf5f3"
         >
           <h2
@@ -918,12 +923,14 @@
                   type="submit"
                   class="w-48 h-10 bg-white place-content-center text-black pl-3 rounded-l-lg"
                 >
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="youremail@gmail.com"
-                    class="place"
-                  />
+                  <form action="/submit" method="post">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="youremail@gmail.com"
+                      class="place"
+                    />
+                  </form>
                 </div>
                 <button
                   type="submit"
@@ -1017,39 +1024,38 @@
         </section>
         <!-- Cookies Goes Here -->
         <section class="w-full">
-          <div
+          <!-- <div
             class="flex text-white h-28 px-10"
             style="background-color: #8f9698"
           >
-            <div class="w-full pr-6">
+            <div class="w-full pr-6 absolute" id="cookieDisplay">
               <div class="ml-12 h-10 flex mt-4 mb-2">
-                <img src="./src/assets/Cookie-icon.png" alt="Cookie-icon" />
-                <h2 class="ml-3 pt-1 font-semibold">We Value Your Privacy</h2>
+                <img id="cookie-icon" src="" alt="Cookie-icon" />
+                <h2 id="cookie-head" class="ml-3 pt-1 font-semibold"></h2>
               </div>
 
               <br />
-              <p class="text-xs font-medium ml-10 tracking-wider -mt-6">
-                We use cookies to provide you with best possible experience.
-                They also allow us analyze user behavior in other to constantly
-                improve the website for you.
-              </p>
+              <p
+                id="cookie"
+                class="text-xs font-medium ml-10 tracking-wider -mt-6"
+              ></p>
             </div>
             <div class="flex w-2/5 float-right ml-32 p-10">
               <button
                 type="submit"
-                class="pb-4 px-3 border-solid border border-white rounded-2xl mr-8"
+                class="btn pb-4 px-3 border-solid border border-white rounded-2xl mr-8"
               >
                 Reject All
               </button>
               <button
                 type="submit"
-                class="pb-4 px-3 border-solid border-white rounded-2xl"
+                class="btn pb-4 px-3 border-solid border-white rounded-2xl"
                 style="background-color: #233b32"
               >
                 Accept All
               </button>
             </div>
-          </div>
+          </div> -->
           <!-- PRIVACY POLICY HERE -->
           <section class="bg-green-700 h-16">
             <div class="text-right text-xs flex p-6 float-right text-gray-200">
