@@ -1,7 +1,7 @@
 let details = [
   {
     id: 1,
-    image: "../assets/Shopping-rice.png",
+    image: "./src/assets/Shopping-rice.png",
     type: "Jollof Rice and Chicken",
     location: "Ikeja, Lagos",
     price: 1500,
@@ -9,7 +9,7 @@ let details = [
   },
   {
     id: 2,
-    image: "../assets/Egusi-&-Poundo.png",
+    image: "./src/assets/Egusi-&-Poundo.png",
     type: "Egusi Soup & Pounded Yam",
     location: "Ojota",
     price: 2500,
@@ -17,7 +17,7 @@ let details = [
   },
   {
     id: 3,
-    image: "../assets/nkwobi2.png",
+    image: "./src/assets/nkwobi2.png",
     type: "Nkwobi",
     location: "Abulegba",
     price: 4000,
