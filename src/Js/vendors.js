@@ -1,11 +1,11 @@
 const vendors = [
   {
     id: 1,
-    image: "../assets/vendor1.png",
+    image: "Local-Dish-Corner/src/assets/vendor1.png",
     vendor: "Juliana Peace",
     address: "No 3, ILEYA STREET, EGBEDA LAGOS",
-    ratingIcon: "../assets/Rating-icon.png",
-    logoIcon: "../assets/peace-icon.png",
+    ratingIcon: "Local-Dish-Corner/src/assets/Rating-icon.png",
+    logoIcon: ".Local-Dish-Corner/src/assets/peace-icon.png",
   },
   {
     id: 2,
