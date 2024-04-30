@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login page</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body>
-  <section class="container flex flex-col md:flex-row ">
-    <div class="font-sans mt-4 ml-10 w-full md:w-1/2  ">
-     <div>
-        <!--logo-->
-        <img src="../assets/logo-no-bg1.png"alt="logo" class="mt-4 "/>
-        <div >
-         <div class="font-serif text-2xl mt-32 font-semibold">Login</div>
-         <p class=" mt- mb-">Welcome, kindly enter your details.</p>
-          <!--input space-->
-     <form action="/submit-login" method="post" class=" mb-8">
-      <div>
-        <input type="email" placeholder="Email Address/Phone number" 
-          class="border border-green-800 focus:outline-none px-3 py-3 rounded-xl w-full max-w-md mt-12"/>
-      </div>
-      <div class="flex gap-64 border border-green-800 focus:outline-none px-3 py-3 rounded-xl w-full max-w-md mt-4 mb-8">
-        <input type="password" placeholder="Password" class="w-full focus:outline-none"/>
-        <img src="../assets/icons8-invisible-32 (1).png" alt="eye slash" class="ml-8"/>
-      </div>
-      
-    </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="container flex flex-col md:flex-row">
+      <div class="font-sans mt-4 ml-10 w-full md:w-1/2">
+        <div>
+          <!--logo-->
+          <img src="../assets/logo-no-bg1.png" alt="logo" class="mt-4" />
+          <div>
+            <div class="font-serif text-2xl mt-32 font-semibold">Login</div>
+            <p class="mt- mb-">Welcome, kindly enter your details.</p>
+            <!--input space-->
+            <form action="/submit-login" method="post" class="mb-8">
+              <div>
+                <input
+                  type="email"
+                  placeholder="Email Address/Phone number"
+                  class="border border-green-800 focus:outline-none px-3 py-3 rounded-xl w-full max-w-md mt-12"
+                />
+              </div>
+              <div
+                class="flex gap-64 border border-green-800 focus:outline-none px-3 py-3 rounded-xl w-full max-w-md mt-4 mb-8"
+              >
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="w-full focus:outline-none"
+                />
+                <img
+                  src="../assets/icons8-invisible-32 (1).png"
+                  alt="eye slash"
+                  class="ml-8"
+                />
+              </div>
+            </form>
 
-     <div>
-       <a href="./forgetpassword.html" class="  text-green-800  "> Forgot Password?</a>
-     </div>
-
+            <div>
+              <a href="./forgetpassword.html" class="text-green-800">
+                Forgot Password?</a
+              >
+            </div>
 
             <div class="flex gap-6 mt-8">
-              <div class="w-8 h-8 border border-black rounded-lg"></div>
+              <input type="checkbox" class="w-6 cursor-pointer" />
 
-              <p class="pt-2 text-gray-500">I am not a robot</p>
+              <p class="pt-3 text-gray-500">I am not a robot</p>
               <img
                 src="../assets/google_recaptcha-official.svg"
                 alt="recaptcha"
@@ -46,10 +62,12 @@
 
             <!--sign--up button-->
             <button
+              type="button"
+              onclick="window.location.href='../html/youdeyh.html'"
               class="focus:outline-none text-white px-6 py-4 rounded-full pl-10 w-4/5 text-2xl mt-16 mb-12"
               style="background-color: #f88100"
             >
-              Sign Up
+              Login
             </button>
             <div class="flex items-center">
               <hr class="border-black w-1/4" />
